@@ -1,0 +1,114 @@
+
+
+
+#header{
+     height: 120vh; 
+     /* background: var(--c-black); */
+     width: 100%;
+     /* border: 1px solid white; */
+     /* position: relative;
+     top: 100px;
+     left: 0; */
+}
+#left-header{
+     /* border: 1px solid var(--c-bright-gold); */
+     width: 100%;
+     height: 100%;
+     /* background: linear-gradient( 300deg,var(--c-black), rgba(0,0,0,0.95) ); */
+     background-color: var(--c-black);
+     
+}
+#right-header{
+     /* border: 1px solid var(--c-white); */
+     width: 8%;
+     height: 80%;
+     /* background-color: var(--c-white); */
+     /* opacity: 0.15; */
+     /* box-shadow: inset 5em 1em gold; */
+     /* z-index: 1; */
+
+     position: absolute;
+     top: 0;
+     right: 0;
+
+     z-index: 4;
+
+     /* From https://css.glass */
+/* background: rgba(42, 181, 199, 0.05); */
+/* border-radius: 16px; */
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); */
+/* backdrop-filter: blur(5px); */
+/* -webkit-backdrop-filter: blur(5px); */
+/* border: 1px solid rgba(42, 181, 199, 0.05); */
+     
+     /* From https://css.glass */
+     background: rgba(178, 213, 218, 0.03);
+     /* border-radius: 16px; */
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(5px);
+     -webkit-backdrop-filter: blur(5px);
+     border: 1px solid rgba(42, 181, 199, 0.01);
+
+}
+/* #right-header:before {
+     content: "";
+     position: absolute;
+     background: inherit;
+     z-index: -1;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+     filter: blur(10px);
+     margin: -20px;
+   } */
+
+   .main-area{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 92%;
+        height: 80%;
+        /* background: linear-gradient( 300deg,var(--c-black), rgba(151, 169, 172, 0.1) ); */
+        /* border: 1px solid white; */
+
+   }
+   .bottom-area{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 100%;
+        /* height: 20%; */
+        z-index: 5;
+        border: 1px solid salmon;
+
+        /* From https://css.glass */
+     background: rgba(178, 213, 218, 0.03) !important;
+     /* border-radius: 16px; */
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+     backdrop-filter: blur(5px) !important;
+     -webkit-backdrop-filter: blur(5px) !important;
+     /* border: 1px solid rgba(42, 181, 199, 0.01) !important; */
+
+   }
+   .mp{
+        width: 300px;
+        font-size: 18px;
+   }
+   #scroll-indicator{
+        height: 50px;
+        width: 1px;
+        background-color: #33d7ed;
+        padding-top: 50px;
+        border-radius: 10%;
+   }
+   @media screen and (max-width: 480px) {
+     .bottom-area{
+          /* display: none; */
+     }
+
+
+   }
