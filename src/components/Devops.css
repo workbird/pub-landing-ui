@@ -1,0 +1,96 @@
+#dev-ops
+{
+     background-color: var(--c-dev-ops);
+}
+#dev-ops img{
+     width: 50% !important;
+     height: 50%;
+}
+@media screen and (max-width: 878px){
+     #dev-ops img{
+
+     }
+      #dev-ops div{
+          padding-right: 0 !important;
+          margin-right: 0 !important;
+     }
+
+}
+@media screen and (max-width: 720px){
+     #dev-ops div{
+          width: 80% !important;
+          
+     }
+     #dev-ops div h1{
+          /* margin-left: 100px; */
+     }
+     #dev-ops img{
+          width: 100vw !important;
+          height: 100vh  !important;
+     }
+}
+#dev-ops div h1{
+     font-size: 20px  ;
+}
+#dev-ops div p{
+     font-size: 16px;
+}
+@media screen and (max-width: 1292px)
+{
+     #dev-ops div{
+          width: 100% !important;
+     }
+     #dev-ops div h1{
+          font-size: 20px  ;
+     }
+     #dev-ops div p{
+          font-size: 16px;
+     }
+} 
+ @media screen and (max-width:1023px)
+{
+     #dev-ops div{
+          /* width: 100% !important; */
+      }
+     #dev-ops div h1{
+          font-size: 20px  ;
+     }
+     #dev-ops div p{
+          font-size: 24px;
+          width: 100% !important;
+     }
+} 
+ @media screen and (max-width: 750px){
+      #div-ops div{
+           width: 100% !important;
+      }
+     #dev-ops div h1{
+          font-size: 20px  ;
+     }
+     #dev-ops div p{
+          font-size: 18px;
+          width: 75% !important;
+     }
+     #dev-ops  img{
+          width: 100vw !important;
+     }
+}   
+ @media screen and (max-width: 550px){
+     #div-ops div{
+          width: 100% !important;
+     }
+    #dev-ops div h1{
+         font-size: 20px  ;
+    }
+    #dev-ops div p{
+         font-size: 13px;
+         /* width: 100% !important; */
+    }
+    #dev-ops img{
+         width: 100% !important;
+         height: 100% !important;
+    }
+    .h-w{
+         width: 50% !important;
+    }
+}   
