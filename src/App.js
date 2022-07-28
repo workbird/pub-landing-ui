@@ -5,7 +5,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <>
-      {/* <Hello /> */}
+      {/* <Head /> */}
       <div style={{ height: "500px" }}></div>
       <div className="App">
         <header className="App-header">
