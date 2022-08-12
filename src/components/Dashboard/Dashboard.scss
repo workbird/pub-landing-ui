@@ -26,27 +26,27 @@
 .grid {
     display: grid;
     grid-template-columns: 200px auto 200px;
-
     height: 100vh;
 }
 
 .left {
-    background: #1C1B2C;
+    background: #1c1b2c;
     grid-column: 1/2;
     height: 100vh;
     position: fixed;
     width: 230px;
     left: 0;
     top: 0;
+    padding-top: 7rem;
 }
 .center {
     background: #151422;
-    padding: 5rem 7rem;
+    padding: 7rem;
     grid-column: 2/3;
     // overflow: scroll;
 }
 .right {
-    background: #1C1B2C;
+    background: #1c1b2c;
     color: #ffffff;
     grid-column: 3/4;
     height: 100vh;
@@ -54,8 +54,5 @@
     width: 250px;
     right: 0;
     top: 0;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
-
-
-
