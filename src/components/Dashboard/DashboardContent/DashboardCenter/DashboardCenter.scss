@@ -1,74 +1,94 @@
-.dashboard-center{
+.dashboard-center {
     color: #ffffff;
 }
-.center-content-head{
+.center-content-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     margin-bottom: 4rem;
-    img{
+    img {
         width: 5rem;
     }
-    h3{
+    h3 {
         color: #ffffff;
     }
 }
-#options{
-    border: 1px solid #4AD9EC;
+#options {
+    border: 1px solid #4ad9ec;
     border-radius: 4px;
     background-color: #151422;
     color: #ffffff;
     outline: none;
-    padding: .3rem .5rem;
+    padding: 0.3rem 0.5rem;
     padding-right: 2rem;
     appearance: none;
-    
 }
-.dash-drop{
+.dash-drop {
     position: relative;
     cursor: pointer;
+    border: 4px solid #4ad9ec;
+    outline: none;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    select {
+        border: none;
+        outline: none;
+        border: none !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 4rem !important;
+        font-size: 21px;
+        border-radius: 12px !important;
+    }
 }
-.dash-icon{
+.dash-icon {
     position: absolute;
     right: 8px;
-    top: 5px;
+    top: 16px;
     color: #ffffff;
-    
 }
-.center-content-body{
-    p{
+.center-content-body {
+    p {
         margin-bottom: 0;
     }
-    span{
-        font-size: .7rem;
+    span {
+        font-size: 0.7rem;
     }
 }
-.center-inner-body{
-    padding: .5rem 1rem;
+.center-inner-body {
+    padding: 0.5rem 1rem;
     margin: 1.5rem 0 2rem;
     background-color: #707070;
     border-radius: 5px;
 }
-.center-content-bottom{
-
-    a{
+.center-content-bottom {
+    a {
         text-decoration: none;
         color: #ffffff;
-        padding: .2rem .8rem;
+        padding: 0.2rem 0.8rem;
         background-color: #707070;
     }
 }
-.color-btn{
-    background-color: #A374D5 !important;
+.color-btn {
+    background-color: #a374d5 !important;
     border-radius: 4px;
     color: #000 !important;
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
-.get{
-    background-color: #67B1FC !important;
+.get {
+    background-color: #67b1fc !important;
 }
-.patch{
-    background-color: #60E4C3 !important;
-    
+.patch {
+    background-color: #60e4c3 !important;
+}
+
+.dash-imageContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
 }

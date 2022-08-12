@@ -1,26 +1,13 @@
 import React from "react";
-import "./DashboardCenter.scss";
 import image1 from "../../../../img/services/Salesforce.com_logo.svg.png";
-import { HiOutlineChevronDown } from "react-icons/hi";
+import DashDropDown from "./components/DashDropDown/DashDropDown";
+import DashHeader from "./components/DashHeader/DashHeader";
+import "./DashboardCenter.scss";
 
 const DashboardCenter = () => {
   return (
     <div className="container dashboard-center">
-      <div className="center-content-head">
-        <img src={image1} alt="" />
-        <h3>Salesforce Connector - Mule 4</h3>
-        <div className="dash-drop">
-          <select id="options">
-            <option value="10:14x">10:14x</option>
-            <option value="10:14x">10:14x</option>
-            <option value="10:14x">10:14x</option>
-            <option value="10:14x">10:14x</option>
-          </select>
-          <span className="dash-icon">
-            <HiOutlineChevronDown />
-          </span>
-        </div>
-      </div>
+      <DashHeader />
       <div className="center-content-body">
         <h6>API specification summary</h6>
         <p>API title: PayPal Orders v2</p>
