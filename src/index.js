@@ -1,25 +1,22 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Newnavbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 // import Header from './components/Header';
-import Footer from './components/Newfooter';
 // import Home from './pages/Home';
 import Home from './pages/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
 // import * as mdb from 'mdb-ui-kit'; // lib
 // import { Input } from 'mdb-ui-kit'; // module
 
 // import Twoparticles from './exprement/Twoparticles';
 // import Newheader from './components/Newheader';
 // import Devops from './components/Devops';
-import Copyrights from './components/Copyrights';
-import Services from './components/Services/Services';
 import Dashboard from './components/Dashboard/Dashboard';
+import Services from './components/Services/Services';
 
 // import Myexp from './e+xprement/Myexp';
 
