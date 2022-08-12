@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from "react";
+import Modal from './Modal/Modal';
 
 const theme = createTheme({
     palette: {
@@ -68,7 +69,6 @@ function Navbar() {
         navLinks.style.background = "var(--c-light-gold)";
     }
 
-
     return (
 
         <>
@@ -81,12 +81,13 @@ function Navbar() {
                     <ul className='my-auto'><ThemeProvider theme={theme}>
                         <li className='nav-item'><a href="#" className='text-decoration-none'> <Button color='secondary'>Home</Button></a></li>
                         <li className='nav-item'><a href="#" className='text-decoration-none'><Button color='secondary'>About</Button></a></li>
-                        <li className='nav-item'><a href="#" className='text-decoration-none'>
+                        <li className='nav-item'><a href="/services" className='text-decoration-none'>
                             <Button color='secondary'>Services</Button>
                         </a></li>
-                        <span className='nav-item'><a href="#" className='text-decoration-none'>
-                            <Button color='primary' variant="contained">Get Started</Button>
-                        </a></span>
+                        <span className='nav-item'>
+                            <Button color='primary' variant="contained" data-toggle="modal" data-target="#exampleModalCenter">Get Started</Button>
+                        <Modal/>
+                        </span>
                     </ThemeProvider>
                     </ul>
                 </div>

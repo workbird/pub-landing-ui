@@ -1,0 +1,61 @@
+.board {
+    height: 400px;
+    width: 800px;
+    background: rgb(185, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.light {
+    color: aqua;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.dialog {
+    height: 50px;
+    width: 50px;
+    background: #ccc;
+    position: absolute;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+
+    height: 100vh;
+}
+
+.left {
+    background: #1C1B2C;
+    grid-column: 1/2;
+    height: 100vh;
+    position: fixed;
+    width: 230px;
+    left: 0;
+    top: 0;
+}
+.center {
+    background: #151422;
+    padding: 5rem 7rem;
+    grid-column: 2/3;
+    // overflow: scroll;
+}
+.right {
+    background: #1C1B2C;
+    color: #ffffff;
+    grid-column: 3/4;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    right: 0;
+    top: 0;
+    padding-top: 5rem;
+}
+
+
+

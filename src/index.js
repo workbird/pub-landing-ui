@@ -10,6 +10,7 @@ import Navbar from './components/Newnavbar';
 import Footer from './components/Newfooter';
 // import Home from './pages/Home';
 import Home from './pages/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import * as mdb from 'mdb-ui-kit'; // lib
 // import { Input } from 'mdb-ui-kit'; // module
 
@@ -17,6 +18,8 @@ import Home from './pages/Home';
 // import Newheader from './components/Newheader';
 // import Devops from './components/Devops';
 import Copyrights from './components/Copyrights';
+import Services from './components/Services/Services';
+import Dashboard from './components/Dashboard/Dashboard';
 
 // import Myexp from './e+xprement/Myexp';
 
@@ -25,16 +28,18 @@ ReactDOM.render(
     {/* <App /> */}
 
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='home' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/dashboard' element={<Dashboard/>} />
         {/* <Route path='exp' element={<Myexp />} /> */}
         {/* <Route path='header' element={<Newheader />} /> */}
         {/* <Route path='two-particles-at-same-div' element={<Twoparticles />} /> */}
       </Routes>
-      <Footer />
-      <Copyrights/>
+      {/* <Footer /> */}
+      {/* <Copyrights/> */}
     </BrowserRouter>
 
   </React.StrictMode>,
