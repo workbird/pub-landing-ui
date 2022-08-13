@@ -1,0 +1,43 @@
+.apiBtnContent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+}
+
+.apiBtnTitle {
+    font-size: 21px;
+    margin-bottom: 1.5rem;
+}
+
+.apiBtn {
+    display: block;
+    color: black;
+    padding: 0.3rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 17px;
+    border-radius: 0.25rem;
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    &.get {
+        background: #67b1fc !important;
+    }
+    &.patch {
+        background: #60e4c3 !important;
+    }
+    &.post {
+        background: #a374d5 !important;
+    }
+    &.delete {
+        background: #f9b6b6 !important;
+    }
+    &.put {
+        background: #8a6a6a !important;
+    }
+    &.update {
+        background: #f9b6b6 !important;
+    }
+}

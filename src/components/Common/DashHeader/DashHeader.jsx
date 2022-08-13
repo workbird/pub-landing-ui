@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from "../../../../../../img/services/Salesforce.com_logo.svg.png";
-import DashDropDown from "../DashDropDown/DashDropDown";
+import image1 from "../../../img/services/Salesforce.com_logo.svg.png";
+import DashDropDown from "./components/DashDropDown/DashDropDown";
 
 export default function DashHeader() {
     return (

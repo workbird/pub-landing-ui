@@ -3,7 +3,7 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 
 export default function DashDropDown() {
     return (
-        <div className="dash-drop">
+        <div className="dash-drop ">
             <select id="options">
                 <option value="10:14x">10:14x</option>
                 <option value="10:14x">10:14x</option>
