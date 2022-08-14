@@ -1,8 +1,8 @@
-import './Newfooter.css';
 import logo from '../Group 692.png';
+import './Newfooter.css';
 
 //@mui buttons
-import { createTheme, ThemeProvider, CustomInput, Button } from '@mui/material';
+import { Button, createTheme, ThemeProvider } from '@mui/material';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -49,20 +49,20 @@ function NewFooter() {
                                    <ul className='list-inline footer-social-icon'>
                                         <li className="list-inline-item pb-3"><a href="#" title="facebook" className=''>
                                              <ThemeProvider theme={socialBtnTheme}>
-                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-facebook-f py-1"></i></Button>
+                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-facebook-f py-1"></i></Button>
                                              </ThemeProvider>
                                         </a></li>
                                         <li className="list-inline-item pb-3"><a href="#" title="instagram" className='text-decoration-none'>
                                              <ThemeProvider theme={socialBtnTheme}>
-                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-instagram py-1"></i></Button>
+                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-instagram py-1"></i></Button>
                                              </ThemeProvider></a></li>
                                         <li className="list-inline-item pb-3"><a href="#" title="twitter" className='text-decoration-none'>
                                              <ThemeProvider theme={socialBtnTheme}>
-                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-twitter py-1"></i></Button>
+                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-twitter py-1"></i></Button>
                                              </ThemeProvider></a></li>
                                         <li className="list-inline-item pb-3"><a href="#" title="whatsapp" className='text-decoration-none'>
                                              <ThemeProvider theme={socialBtnTheme}>
-                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-whatsapp py-1"></i></Button>
+                                                  <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-whatsapp py-1"></i></Button>
                                              </ThemeProvider></a></li>
 
                                    </ul>
@@ -71,7 +71,7 @@ function NewFooter() {
                                    <ul className='list-inline'>
                                         <li className='list-inline-item'>
                                              <ThemeProvider theme={socialBtnTheme}>
-                                                  <Button color='primary' data-aos="flip-right"><i class="fas fa-envelope-open font-x-large" ></i></Button></ThemeProvider>
+                                                  <Button color='primary' data-aos="flip-right"><i className="fas fa-envelope-open font-x-large" ></i></Button></ThemeProvider>
                                         </li>
                                         <li className='list-inline-item'>
                                              <div className='d-flex flex-column text-white' data-aos="zoom-in">
@@ -149,10 +149,10 @@ function NewFooter() {
                                    </form>
                               </li>
                               <li className='f-w-normal mt-5'>
-                                   <a href="#" className='text-decoration-none d-flex'><i class="fas fa-map-marker-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">Bengalluru & Patna - India</span></a>
+                                   <a href="#" className='text-decoration-none d-flex'><i className="fas fa-map-marker-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">Bengalluru & Patna - India</span></a>
                               </li>
                               <li className='f-w-normal mt-5'>
-                                   <a href="#" className='text-decoration-none d-flex'><i class="fas fa-phone-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">+91 8936832521</span></a>
+                                   <a href="#" className='text-decoration-none d-flex'><i className="fas fa-phone-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">+91 8936832521</span></a>
                               </li>
                          </ul>
                     </div>

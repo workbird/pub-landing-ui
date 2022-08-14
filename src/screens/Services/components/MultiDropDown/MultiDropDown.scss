@@ -1,0 +1,43 @@
+$color: #0057a5;
+
+.multiDropDow {
+    * {
+        font-size: 1rem !important;
+    }
+}
+
+.dropMenu {
+    background: $color;
+}
+.multiDropDow {
+    button {
+        background: transparent !important;
+        color: #fff !important;
+        border-radius: 0 !important;
+        &:is(:hover, :active, :focus) {
+            background-color: $color !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+.dropMenu {
+    border-radius: 0 !important;
+    top: 100% !important;
+
+    * {
+        color: #fff !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+        background-color: $color !important;
+        &:is(:hover, :focus) {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.dropWrapper {
+    * {
+        background-color: $color !important;
+    }
+}

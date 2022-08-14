@@ -1,6 +1,6 @@
 import React from "react";
-import { MdClose } from "react-icons/md";
 import DatePicker from "react-datepicker";
+import { MdClose } from "react-icons/md";
 
 export default function ModalContent({ onClose }) {
     const [startDate, setStartDate] = React.useState(new Date());
@@ -18,7 +18,7 @@ export default function ModalContent({ onClose }) {
                 <div className="inner-body d-flex justify-content-between align-items-center">
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         placeholder="Need to call back"
@@ -45,34 +45,34 @@ export default function ModalContent({ onClose }) {
             <div className="modal-ftr">
                 <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="First Name"
                 />
                 <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Last Name"
                 />
                 <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Email"
                 />
                 <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Phone"
                 />
                 <textarea
-                    class="form-control item1"
+                    className="form-control item1"
                     id="exampleFormControlTextarea1"
                     placeholder="Add description"
                     rows="4"

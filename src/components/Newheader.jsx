@@ -75,7 +75,7 @@ function Newheader() {
                         >
                             <ThemeProvider theme={socialBtnRightBar}>
                                 <Button color="primary">
-                                    <i class="fab fa-facebook-f font-x-large"></i>
+                                    <i className="fab fa-facebook-f font-x-large"></i>
                                 </Button>
                             </ThemeProvider>
                         </a>
@@ -86,14 +86,14 @@ function Newheader() {
                         >
                             <ThemeProvider theme={socialBtnRightBar}>
                                 <Button color="primary">
-                                    <i class="fab fa-instagram font-x-large"></i>
+                                    <i className="fab fa-instagram font-x-large"></i>
                                 </Button>
                             </ThemeProvider>
                         </a>
                         <a href="#" className="text-decoration-none">
                             <ThemeProvider theme={socialBtnRightBar}>
                                 <Button color="primary">
-                                    <i class="fab fa-twitter font-x-large"></i>
+                                    <i className="fab fa-twitter font-x-large"></i>
                                 </Button>
                             </ThemeProvider>
                         </a>
@@ -104,7 +104,7 @@ function Newheader() {
                         >
                             <ThemeProvider theme={socialBtnRightBar}>
                                 <Button color="primary">
-                                    <i class="fab fa-whatsapp font-x-large"></i>
+                                    <i className="fab fa-whatsapp font-x-large"></i>
                                 </Button>
                             </ThemeProvider>
                         </a>

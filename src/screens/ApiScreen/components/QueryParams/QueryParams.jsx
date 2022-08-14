@@ -3,43 +3,44 @@ import QueryTableBody from "./components/QueryTableBody/QueryTableBody";
 import QueryTableHeader from "./components/QueryTableHeader/QueryTableHeader";
 import "./QueryParams.scss";
 
-const values = [
+const valuesItems = [
     {
         _id: 0,
-        values: {
-            keys: "",
-            values: "",
-            description: "",
-        },
         initial: true,
     },
 ];
 
 export default function QueryParams() {
     const [valuesState, setValuesState] = React.useState([]);
+    const [valuesItemsState, setValuesItemsState] = React.useState([]);
 
     const handleAppendValue = (value, id) => {
         const ifExists = valuesState.find((item) => item._id === id);
+        const ifExistsItems = valuesItemsState.find((item) => item._id === id);
+
+        if (ifExistsItems) {
+            const removedState = valuesItemsState.filter(
+                (item) => item._id !== id
+            );
+            setValuesItemsState([...removedState, { ...ifExistsItems, value }]);
+        } else {
+            setValuesItemsState([...valuesItemsState, { _id: id, value }]);
+        }
+
         if (ifExists) {
             if (ifExists.initial) {
                 const da = {
                     ...ifExists,
-                    values: value,
                     initial: false,
                 };
 
                 const dd = {
                     _id: valuesState.length + 1,
-                    values: {
-                        keys: "",
-                        values: "",
-                        description: "",
-                    },
                     initial: true,
                 };
 
-                setValuesState([
-                    ...valuesState.filter((item) => item._id !== id),
+                setValuesState((prev) => [
+                    ...prev.filter((item) => item._id !== id),
                     da,
                     dd,
                 ]);
@@ -47,16 +48,14 @@ export default function QueryParams() {
         }
     };
 
-    console.log(valuesState);
-
     React.useEffect(() => {
-        console.log(values);
-        setValuesState(values);
+        console.log(valuesItems);
+        setValuesState(valuesItems);
     }, []);
 
     return (
         <div>
-            <h5 className="queryParamsTitle">Quereys Prams</h5>
+            <h5 className="queryParamsTitle pt-3 pb-4">Quereys Prams</h5>
             <div className="queryTable">
                 <QueryTableHeader />
                 {valuesState.map((value, index) => (

@@ -3,18 +3,20 @@ import { BiSearch } from "react-icons/bi";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import dropdownData from "../../data/DropdownData";
 import data from "../../data/ServicesListData";
-import Dropdown from "../Common/Dropdown/Dropdown";
+import MultiDropDown from "./components/MultiDropDown/MultiDropDown";
+import ServicesList from "./components/ServicesList/ServicesList";
 import "./Services.css";
-import ServicesList from "./ServicesList/ServicesList";
+
 const Services = () => {
     const [services, setServices] = useState(data);
     const [dropdown, setDropdown] = useState(dropdownData);
+    
     return (
         <div className="services">
             <div className="container py-5">
                 <div className="d-flex justify-content-between mb-5">
                     {dropdown.map((drop, key) => (
-                        <Dropdown key={key} drop={drop}></Dropdown>
+                        <MultiDropDown key={key}  />
                     ))}
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
@@ -24,28 +26,28 @@ const Services = () => {
                         <a href="#">eiusmod tempor</a>
                     </div>
                 </div>
-                <div class="input-group my-5">
+                <div className="input-group my-5">
                     <button
-                        class="btn btn-outline-secondary"
+                        className="btn btn-outline-secondary"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
                         All type <HiOutlineChevronDown />
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                                 Action
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                                 Another action
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                                 Something else here
                             </a>
                         </li>
@@ -64,10 +66,7 @@ const Services = () => {
                 </div>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {services.map((service, index) => (
-                        <ServicesList
-                            key={index}
-                            service={service}
-                        ></ServicesList>
+                        <ServicesList key={index} service={service} />
                     ))}
                 </div>
             </div>

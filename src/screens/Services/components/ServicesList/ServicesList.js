@@ -1,12 +1,12 @@
 import React from "react";
 import "./ServicesList.css";
 // import salesforce from '../../../img/services/Salesforce.com_logo.svg.png';
-import { HiThumbUp, HiThumbDown } from "react-icons/hi";
+import { HiThumbDown, HiThumbUp } from "react-icons/hi";
 const ServicesList = (props) => {
   const { number, img, version, connector, Organization } = props.service;
   return (
-    <div class="col">
-      <div class="card">
+    <div className="col">
+      <div className="card">
         <div className="d-flex justify-content-between align-items-center">
           <p className="number">{number}</p>
           <div className="service-icon">

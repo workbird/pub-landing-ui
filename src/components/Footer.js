@@ -7,7 +7,7 @@ import './Footer.css';
 //   import {faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 //@mui buttons
-import { createTheme, ThemeProvider, CustomInput, Button } from '@mui/material';
+import { Button, createTheme, ThemeProvider } from '@mui/material';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -55,26 +55,26 @@ function Footer() {
                               <ul className="list-inline mt-4 footer-social-icon">
                                    <li className="list-inline-item"><a href="#" title="facebook" className='text-decoration-none'>
                                         <ThemeProvider theme={socialBtnTheme}>
-                                             <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-facebook-f py-1"></i></Button>
+                                             <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-facebook-f py-1"></i></Button>
                                         </ThemeProvider>
                                    </a></li>
                                    <li className="list-inline-item"><a href="#" title="instagram" className='text-decoration-none'>
                                         <ThemeProvider theme={socialBtnTheme}>
-                                             <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-instagram py-1"></i></Button>
+                                             <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-instagram py-1"></i></Button>
                                         </ThemeProvider></a></li>
                                    <li className="list-inline-item"><a href="#" title="twitter" className='text-decoration-none'>
                                         <ThemeProvider theme={socialBtnTheme}>
-                                             <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-twitter py-1"></i></Button>
+                                             <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-twitter py-1"></i></Button>
                                         </ThemeProvider></a></li>
                                    <li className="list-inline-item"><a href="#" title="whatsapp" className='text-decoration-none'>
                                         <ThemeProvider theme={socialBtnTheme}>
-                                             <Button color='primary' variant="contained" data-aos="flip-right"><i class="fab fa-whatsapp py-1"></i></Button>
+                                             <Button color='primary' variant="contained" data-aos="flip-right"><i className="fab fa-whatsapp py-1"></i></Button>
                                         </ThemeProvider></a></li>
                               </ul>
                               <ul className='list-inline mt-4'>
                                    <li className='list-inline-item'>
                                         <ThemeProvider theme={socialBtnTheme}>
-                                             <Button color='primary' data-aos="flip-right"><i class="fas fa-envelope-open font-x-large" ></i></Button></ThemeProvider></li>
+                                             <Button color='primary' data-aos="flip-right"><i className="fas fa-envelope-open font-x-large" ></i></Button></ThemeProvider></li>
                                    <li className='list-inline-item'>
                                         <div className='d-flex flex-column text-white' data-aos="zoom-in">
                                              <span>
@@ -141,10 +141,10 @@ function Footer() {
 
                               </form>
                               <div className='f-w-normal mt-5'>
-                                   <a href="#" className='text-decoration-none d-flex'><i class="fas fa-map-marker-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">Bengalluru & Patna - India</span></a>
+                                   <a href="#" className='text-decoration-none d-flex'><i className="fas fa-map-marker-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">Bengalluru & Patna - India</span></a>
                               </div>
                               <div className='f-w-normal mt-5'>
-                                   <a href="#" className='text-decoration-none d-flex'><i class="fas fa-phone-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">+91 8936832521</span></a>
+                                   <a href="#" className='text-decoration-none d-flex'><i className="fas fa-phone-alt fo-icon " data-aos="flip-left"></i><span className='text-white f-w-normal' data-aos="zoom-in">+91 8936832521</span></a>
                               </div>
                          </div>
                     </div>
