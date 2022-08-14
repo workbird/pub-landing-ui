@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from "react";
-import Modal from './Modal/Modal';
+import Modal from '../screens/Modal/Modal';
 
 const theme = createTheme({
     palette: {

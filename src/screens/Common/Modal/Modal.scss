@@ -3,7 +3,7 @@
     width: 100vw;
     background: #00000070;
     position: fixed;
-    z-index: 10;
+    z-index: 1050;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     &.show {
@@ -13,7 +13,7 @@
 
 .cs-modal {
     position: absolute;
-    z-index: 100;
+    z-index: 1080;
     width: 100%;
     opacity: 0;
     margin-top: -40px;
