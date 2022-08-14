@@ -1,46 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Newnavbar";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-// import Header from './components/Header';
-// import Home from './pages/Home';
-import Home from "./pages/Home";
-// import * as mdb from 'mdb-ui-kit'; // lib
-// import { Input } from 'mdb-ui-kit'; // module
+import App from "./App";
 
-// import Twoparticles from './exprement/Twoparticles';
-// import Newheader from './components/Newheader';
-// import Devops from './components/Devops';
-import Dashboard from "./screens/Dashboard/Dashboard";
-import Services from "./screens/Services/Services";
-import SideMenu from "./screens/SideMenu/SideMenu";
-import { Api } from "@mui/icons-material";
-
-// import Myexp from './e+xprement/Myexp';
 
 ReactDOM.render(
     <React.StrictMode>
-        {/* <App /> */}
-
         <BrowserRouter>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/dashboard" element={<SideMenu />}>
-                    <Route path="/dashboard/" element={<Dashboard />} />
-                    <Route path="/dashboard/api" element={<Api />} />
-                </Route>
-                {/* <Route path='exp' element={<Myexp />} /> */}
-                {/* <Route path='header' element={<Newheader />} /> */}
-                {/* <Route path='two-particles-at-same-div' element={<Twoparticles />} /> */}
-            </Routes>
-            {/* <Footer /> */}
-            {/* <Copyrights/> */}
+            <App />
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById("root")

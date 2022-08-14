@@ -1,29 +1,29 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
+import Newnavbar from './components/NewNavBar/Newnavbar';
+
+import Home from "./pages/Home";
+import ApiScreen from './screens/ApiScreen/ApiScreen';
+import Dashboard from "./screens/Dashboard/Dashboard";
+import Services from "./screens/Services/Services";
+import SideMenu from "./screens/SideMenu/SideMenu";
 
 function App() {
   return (
     <>
-      <Header />
-      <div style={{ height: "500px" }}></div>
-      <div className="App">
-
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+            <Newnavbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/dashboard" element={<SideMenu />}>
+                    <Route path="/dashboard/" element={<Dashboard />} />
+                    <Route path="/dashboard/api" element={<ApiScreen />} />
+                </Route>
+                {/* <Route path='exp' element={<Myexp />} /> */}
+                {/* <Route path='header' element={<Newheader />} /> */}
+                {/* <Route path='two-particles-at-same-div' element={<Twoparticles />} /> */}
+            </Routes>
     </>
   );
 }

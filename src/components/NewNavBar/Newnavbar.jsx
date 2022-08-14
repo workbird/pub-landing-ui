@@ -1,4 +1,4 @@
-import logo from "../new-logo-2.png";
+import logo from "../../new-logo-2.png";
 import "./Newnavbar.css";
 
 //Font Awesome imports
@@ -14,8 +14,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Modal from "../screens/Common/Modal/Modal";
-import ModalContent from "../screens/ModalContent/ModalContent";
+import Modal from "../../screens/Common/Modal/Modal";
+import ModalContent from "../../screens/ModalContent/ModalContent";
 
 const theme = createTheme({
     palette: {
@@ -59,8 +59,6 @@ const Newnavbar = () => {
         AOS.init({ duration: 2000 });
     }, []);
     const [isShown, setIsShown] = React.useState(false);
-    const [startDate, setStartDate] = React.useState(new Date());
-    const [startDate2, setStartDate2] = React.useState(new Date());
 
     return (
         <nav
@@ -124,20 +122,16 @@ const Newnavbar = () => {
                                         Get Started
                                     </Button>
                                 </span>
-
-                                <Modal
-                                    isShown={isShown}
-                                    toggleModal={() =>
-                                        setIsShown((prev) => !prev)
-                                    }
-                                >
-                                    <ModalContent
-                                        onClose={() =>
-                                            setIsShown((prev) => !prev)
-                                        }
-                                    />
-                                </Modal>
                             </li>
+
+                            <Modal
+                                isShown={isShown}
+                                toggleModal={() => setIsShown((prev) => !prev)}
+                            >
+                                <ModalContent
+                                    onClose={() => setIsShown((prev) => !prev)}
+                                />
+                            </Modal>
                         </ThemeProvider>
                     </ul>
                 </div>
