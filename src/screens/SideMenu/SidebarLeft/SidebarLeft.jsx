@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./SidebarLeft.scss";
 import { HiArrowLeft } from "react-icons/hi";
+import "./SidebarLeft.scss";
 
-import SideDropdownList from "./SideDropdownList";
 import SideDropdownData from "../../../data/SideDropdownData";
+import SideDropdownList from "./SideDropdownList";
 
 const SidebarLeft = () => {
     const [sideDropdownList, setSideDropdownList] = useState(SideDropdownData);
@@ -23,10 +23,11 @@ const SidebarLeft = () => {
                 </div>
             </div>
             <div>
-                {sideDropdownList.map((dropdownlist) => (
+                {sideDropdownList.map((dropdownlist, index) => (
                     <SideDropdownList
                         dropdownlist={dropdownlist}
-                    ></SideDropdownList>
+                        key={dropdownlist.title + index}
+                    />
                 ))}
             </div>
             <div className="left-bottom p-3">

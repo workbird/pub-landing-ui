@@ -1,0 +1,39 @@
+.dash-options {
+    border: 1px solid #4ad9ec;
+    border-radius: 4px;
+    background-color: #151422;
+    color: #ffffff;
+    outline: none;
+    padding: 0.3rem 0.5rem;
+    padding-right: 2rem;
+    appearance: none;
+}
+
+.dash-drop {
+    position: relative;
+    cursor: pointer;
+    border: 4px solid #4ad9ec;
+    outline: none;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    select {
+        border: none;
+        outline: none;
+        border: none !important;
+        padding-top: 0.7rem !important;
+        padding-bottom: 0.7rem !important;
+        padding-left: 1.5rem !important;
+        padding-right: 6rem !important;
+        font-size: 21px;
+        border-radius: 12px !important;
+    }
+}
+
+.dash-icon {
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    color: #ffffff;
+}

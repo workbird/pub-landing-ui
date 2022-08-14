@@ -1,5 +1,5 @@
 import logo from "../../new-logo-2.png";
-import "./Newnavbar.css";
+import "./Newnavbar.scss";
 
 //Font Awesome imports
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -109,6 +109,10 @@ const Newnavbar = () => {
                             <NavItem title="About" route="/about" />
                             <NavItem title="Services" route="/services" />
                             <NavItem title="Dashboard" route="/dashboard/" />
+                            <NavItem
+                                title="Api Details"
+                                route="/dashboard/api"
+                            />
 
                             <li className="nav-item" data-aos="fade-in">
                                 <span className="nav-link ">

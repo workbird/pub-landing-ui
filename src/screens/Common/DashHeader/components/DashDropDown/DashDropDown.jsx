@@ -1,10 +1,15 @@
 import React from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import "./DashDropDown.scss";
 
 export default function DashDropDown({ data, onSelect, selected }) {
     return (
         <div className="dash-drop ">
-            <select id="options" onChange={onSelect} value={selected}>
+            <select
+                className="dash-options"
+                onChange={onSelect}
+                value={selected}
+            >
                 {data?.map((item, index) => {
                     return (
                         <option key={index} value={item.value}>
