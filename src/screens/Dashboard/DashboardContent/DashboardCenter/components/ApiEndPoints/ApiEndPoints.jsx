@@ -23,7 +23,9 @@ export default function ApiEndPoints({ apiTitle, endPoints = [] }) {
     ];
     return (
         <div className="center-content-bottom">
-            <SmallHeader className="my-5">API endpoints</SmallHeader>
+            <SmallHeader className="my-5 dashApiHeaderSmall">
+                API endpoints
+            </SmallHeader>
             <div className="dashEndpoints">
                 {endpoins.map((endpoint, index) => {
                     return (

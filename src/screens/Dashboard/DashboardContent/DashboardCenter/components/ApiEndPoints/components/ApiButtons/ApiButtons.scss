@@ -1,6 +1,12 @@
+@use "../../../../../../../../styles/" as *;
+
 .apiBtnTitle {
-    font-size: 21px;
-    margin-bottom: 1.5rem;
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem;
+    @include break("md") {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .apiButtons {

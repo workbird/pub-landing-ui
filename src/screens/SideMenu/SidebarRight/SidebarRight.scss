@@ -1,53 +1,65 @@
-.inner-right{
+.inner-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .3rem 1rem;
+    padding: 0.3rem 1rem;
     margin-top: 1rem;
     background-color: #707070;
-    p{
-        font-size: .8rem;
+    p {
+        font-size: 0.8rem;
         margin: 0;
     }
-    a{
+    a {
         display: inline-block;
-        padding: .3rem 1rem;
+        padding: 0.3rem 1rem;
         text-decoration: none;
-        background-color:#67B1FC ;
+        background-color: #67b1fc;
         color: #000;
         border-radius: 4px;
-        font-size: .7rem;
+        font-size: 0.7rem;
     }
 }
-.right-bottom{
+.right-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: .7rem;
+    gap: 0.7rem;
     margin: 1rem 1rem;
-    p{
-        font-size: .5rem;
+    p {
+        font-size: 0.5rem;
         margin: 0;
     }
-    a{
+    a {
         display: inline-block;
-        padding: .2rem .7rem;
+        padding: 0.2rem 0.7rem;
         text-decoration: none;
-        background-color:#A374D5 ;
+        background-color: #a374d5;
         color: #000;
         border-radius: 4px;
-        font-size: .5rem;
+        font-size: 0.5rem;
     }
-    .get{
-        background-color: #67B1FC;
+    .get {
+        background-color: #67b1fc;
     }
-    .patch{
-        background-color: #60E4C3;
+    .patch {
+        background-color: #60e4c3;
     }
 }
-.circular-bottom{
+.circular-bottom {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
     margin-top: 80px;
+}
+
+.pad-0 {
+    padding: 0 1rem !important;
+}
+
+.rightColItems {
+    h6 {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
 }

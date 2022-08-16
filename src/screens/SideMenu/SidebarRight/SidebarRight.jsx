@@ -1,39 +1,59 @@
 import React from "react";
-import { HiOutlineChevronDown } from "react-icons/hi";
-import CircularMenu from "../../Common/CircularMenu/CircularMenu";
+import Collapsable from "../../../components/Collapsable/Collapsable";
+import ApiWithText from "../common/ApiWithText/ApiWithText";
 import "./SidebarRight.scss";
 
 const SidebarRight = () => {
+    const [isExpanded, setIsExpanded] = React.useState(null);
     return (
         <div className="right">
-            <h6 className="px-3">/qr codes</h6>
-            <div className="inner-right">
-                <a href="#">GET</a>
-                <p>/acadimicapi /qrcode</p>
-                <HiOutlineChevronDown />
-            </div>
-
-            <p className="px-3 mt-4">/orders</p>
-            <div className="right-bottom">
-                <a href="#">POST</a>
-                <p> https://api.paypal.com/v2/checkout/orders</p>
-            </div>
-
-            <p className="px-3 mt-4">/orders</p>
-            <div className="right-bottom">
-                <a href="#" className="get">
-                    GET
-                </a>
-                <p> https://api.paypal.com/v2/checkout/orders</p>
-            </div>
-            <div className="right-bottom">
-                <a href="#" className="patch">
-                    PATCH
-                </a>
-                <p> https://api.paypal.com/v2/checkout/orders</p>
-            </div>
-            <div className="circular-bottom">
-                <CircularMenu />
+            <div className="pt-4">
+                <h6 className="px-3 py-2">/qr codes</h6>
+                <Collapsable
+                    headerComp={
+                        <ApiWithText
+                            method={"get"}
+                            text="/acadimicapi /qrcode"
+                        />
+                    }
+                    className="p-0 important"
+                    titleClassName={"pad-0"}
+                    isExpanded={isExpanded === 1}
+                    toggleOpen={() =>
+                        setIsExpanded((prev) => (prev === 1 ? null : 1))
+                    }
+                >
+                    <div className="rightColItems px-4 pt-4">
+                        <h6 className=" pb-2 ">/orders</h6>
+                        <ApiWithText
+                            method="Post"
+                            text="https://api.paypal.com/v2/checkout/orders"
+                            buttonClassName={"small"}
+                            textClassName="small"
+                        />
+                        <ApiWithText
+                            method="Get"
+                            text="https://api.paypal.com/v2/checkout/orders"
+                            buttonClassName={"small"}
+                            textClassName="small"
+                        />
+                    </div>
+                    <div className="rightColItems px-4 pt-4">
+                        <h6 className=" pb-2 ">/orders</h6>
+                        <ApiWithText
+                            method="put"
+                            text="https://api.paypal.com/v2/checkout/orders"
+                            buttonClassName={"small"}
+                            textClassName="small"
+                        />
+                        <ApiWithText
+                            method="patch"
+                            text="https://api.paypal.com/v2/checkout/orders"
+                            buttonClassName={"small"}
+                            textClassName="small"
+                        />
+                    </div>
+                </Collapsable>
             </div>
         </div>
     );

@@ -1,18 +1,23 @@
+@use "../../../../../styles/" as *;
+
 .dash-options {
     border: 1px solid #4ad9ec;
     border-radius: 4px;
     background-color: #151422;
     color: #ffffff;
     outline: none;
-    padding: 0.3rem 0.5rem;
-    padding-right: 2rem;
+
     appearance: none;
+    @include break("md") {
+        padding: 0.3rem 0.5rem;
+        padding-right: 2rem;
+    }
 }
 
 .dash-drop {
     position: relative;
     cursor: pointer;
-    border: 4px solid #4ad9ec;
+    border: 3px solid #4ad9ec;
     outline: none;
     border-radius: 10px;
     overflow: hidden;
@@ -26,8 +31,21 @@
         padding-bottom: 0.7rem !important;
         padding-left: 1.5rem !important;
         padding-right: 6rem !important;
-        font-size: 21px;
+        font-size: 1rem;
         border-radius: 12px !important;
+    }
+
+    @include break("md") {
+        border: 4px solid #4ad9ec;
+        select {
+            font-size: 1.2rem !important;
+        }
+    }
+    @include break("xl") {
+        border: 4px solid #4ad9ec;
+        select {
+            font-size: 1.5rem !important;
+        }
     }
 }
 

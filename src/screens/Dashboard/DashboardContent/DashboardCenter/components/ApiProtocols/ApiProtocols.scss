@@ -1,3 +1,5 @@
+@use "../../../../../../styles/" as *;
+
 .api {
     margin-top: 1rem;
 }
@@ -9,17 +11,24 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 
     span {
-        font-size: 21px;
+        font-size: 0.9rem;
         text-transform: uppercase;
+    }
+
+    @include break("md") {
+        margin: 2rem 0;
+        span {
+            font-size: 1.2rem;
+        }
     }
 }
 
 .centerInnerBody {
     background: #70707099;
-    padding: 1.2rem 1.7rem;
+    padding: 1rem 1.4rem;
     border-radius: 10px;
     width: 100%;
     resize: none;
@@ -30,14 +39,28 @@
         margin: 0;
         padding: 0;
     }
+    font-size: 1rem;
+    @include break("md") {
+        padding: 1.2rem 1.6rem;
+        font-size: 1.2rem;
+    }
 }
 
 .apiurlDesc {
-    font-size: 16px;
     font-weight: 500;
     margin-bottom: 2rem !important;
 }
 
 .apiurlDescription {
-    margin-bottom: 4rem !important;
+    margin-bottom: 2rem !important;
+    @include break("md") {
+        margin-bottom: 4rem !important;
+    }
+}
+
+.dashApiHeaderSmall {
+    font-size: 1.2rem !important;
+    @include break("md") {
+        font-size: 1.5rem !important;
+    }
 }

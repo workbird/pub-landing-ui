@@ -9,9 +9,9 @@ export default function ApiProtocols() {
                     Use the Orders API to create, update, show details for,
                     authorize and capture payments for, save, and void orders.
                 </p>
-                <div className="centerInnerBody" readOnly resize="none">
+                <h3 className="centerInnerBody" readOnly resize="none">
                     https://api.paypal.com/v2/checkout
-                </div>
+                </h3>
             </div>
             <div className="httpsLink">
                 <p className="dashApiHeaderSmall">Supported protocols</p>

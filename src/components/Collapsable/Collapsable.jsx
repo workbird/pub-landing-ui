@@ -21,7 +21,7 @@ export default function Collapsable({
         >
             <div
                 onClick={toggleOpen}
-                className={`collapsableTitle justify-content-between d-flex py-3 px-4 ${
+                className={`collapsableTitle align-items-center justify-content-between d-flex py-3 px-4 ${
                     titleClassName || ""
                 }`}
             >

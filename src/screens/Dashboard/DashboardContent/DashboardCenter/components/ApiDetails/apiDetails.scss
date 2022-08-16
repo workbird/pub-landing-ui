@@ -1,3 +1,5 @@
+@use "../../../../../../styles/" as *;
+
 .apiDescription {
     display: flex;
     flex-direction: column;
@@ -5,9 +7,17 @@
 }
 
 .apiDetailTitle {
-    font-size: 24px !important;
+    font-size: 1.2rem !important;
+    @include break("md") {
+        font-size: 1.5rem !important;
+    }
 }
 
 .apiDescSummary {
-    font-size: 20px !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+    @include break("md") {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
 }

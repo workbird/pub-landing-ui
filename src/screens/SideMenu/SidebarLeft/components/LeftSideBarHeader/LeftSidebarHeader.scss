@@ -1,6 +1,12 @@
+@use "../../../../../styles/" as *;
+
 .leftHeaderTitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+
+    @include break("md") {
+        font-size: 1.5rem;
+    }
 }
