@@ -1,58 +1,55 @@
-.board {
-    height: 400px;
-    width: 800px;
-    background: rgb(185, 25, 25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+@use "../../styles/" as *;
 
-.light {
-    color: aqua;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.dialog {
-    height: 50px;
-    width: 50px;
-    background: #ccc;
-    position: absolute;
-}
+$leftPanelWidth: 300px;
+$rightPanelWidth: 300px;
 
 .grid {
     display: grid;
-    grid-template-columns: 200px auto 200px;
-    height: 100vh;
+    @include break(xl) {
+        height: 100vh;
+        grid-template-columns: $leftPanelWidth auto $rightPanelWidth;
+    }
 }
 
 .left {
     background: #1c1b2c;
-    grid-column: 1/2;
-    height: 100vh;
-    position: fixed;
-    width: 230px;
-    left: 0;
-    top: 0;
     padding-top: 7rem;
+    @include break(xl) {
+        grid-column: 1/2;
+        height: 100vh;
+        position: fixed;
+        width: $leftPanelWidth;
+        left: 0;
+        top: 0;
+        padding-top: 7rem;
+        overflow: scroll;
+    }
 }
 .center {
     background: #151422;
-    padding: 7rem;
-    grid-column: 2/3;
+    @include break(xl) {
+        grid-column: 2/3;
+        padding-top: 7rem;
+    }
     // overflow: scroll;
 }
+
+.center-container {
+    padding: 1rem;
+}
+
 .right {
     background: #1c1b2c;
     color: #ffffff;
-    grid-column: 3/4;
-    height: 100vh;
-    position: fixed;
-    width: 250px;
-    right: 0;
-    top: 0;
-    padding-top: 7rem;
+    grid-row: 2/3;
+    @include break(xl) {
+        grid-column: 3/4;
+        height: 100vh;
+        position: fixed;
+        width: $rightPanelWidth;
+        right: 0;
+        top: 0;
+        padding-top: 7rem;
+        overflow: scroll;
+    }
 }

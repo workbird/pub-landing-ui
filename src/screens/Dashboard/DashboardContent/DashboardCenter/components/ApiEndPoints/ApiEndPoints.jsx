@@ -1,6 +1,6 @@
 import React from "react";
 import SmallHeader from "../../../common/SmallHeader/SmallHeader";
-import ApiBtn from "./components/ApiBtn/ApiBtn";
+import ApiButtons from "./components/ApiButtons/ApiButtons";
 
 export default function ApiEndPoints({ apiTitle, endPoints = [] }) {
     const endpoins = [
@@ -27,7 +27,7 @@ export default function ApiEndPoints({ apiTitle, endPoints = [] }) {
             <div className="dashEndpoints">
                 {endpoins.map((endpoint, index) => {
                     return (
-                        <ApiBtn
+                        <ApiButtons
                             key={index}
                             title={endpoint.title}
                             methods={endpoint.methods}

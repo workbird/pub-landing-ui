@@ -41,6 +41,11 @@
     border-radius: 0.2rem;
     &.bgDark {
         background: #5c5c5c;
+        .tabsItem {
+            &:hover {
+                background: #9d9d9d;
+            }
+        }
     }
 }
 
@@ -48,10 +53,26 @@
     padding: 0.2rem 1rem;
     margin: 0 0.5rem;
     border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     &.active {
         background: #9d9d9d;
+        &:hover {
+            background: darken($color: #9d9d9d, $amount: 10%);
+        }
     }
     &.active-blue {
         color: #00a1e0;
     }
+}
+
+.codeViewer {
+    padding: 2rem;
+    .react-json-view {
+        background: transparent !important;
+    }
+}
+
+.code {
+    padding: 0 1rem;
 }

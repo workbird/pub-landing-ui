@@ -1,5 +1,15 @@
 import React from "react";
 import "./QueryDescription.scss";
+import ReactJson from "react-json-view";
+
+const bodyDaata = [
+    {
+        code: "string",
+        field: "string",
+        message: "Description of the error",
+        contextId: "0b7a2d85-8233-4a0f-867b-fa77a8cdf8de",
+    },
+];
 
 export default function QueryDescription() {
     return (
@@ -30,7 +40,7 @@ export default function QueryDescription() {
                         <span>734 B</span>
                     </div>
 
-                    <div className="saveResponses">
+                    <div className="saveResponses px-4">
                         <span>Save response</span>
                     </div>
                 </div>
@@ -56,10 +66,9 @@ export default function QueryDescription() {
                 </div>
             </div>
 
-            <code className="code">
-                "code": "string", "field": "string", "message": "Description of
-                the error", "contextId": "0b7a2d85-8233-4a0f-867b-fa77a8cdf8de"
-            </code>
+            <div className="codeViewer">
+                <ReactJson theme={"ashes"} src={bodyDaata} />
+            </div>
         </div>
     );
 }

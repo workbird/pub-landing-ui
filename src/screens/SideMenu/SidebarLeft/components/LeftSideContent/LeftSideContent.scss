@@ -1,0 +1,19 @@
+.lsnTitle {
+    cursor: pointer;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+}
+
+.collapsables {
+    overflow: scroll;
+}

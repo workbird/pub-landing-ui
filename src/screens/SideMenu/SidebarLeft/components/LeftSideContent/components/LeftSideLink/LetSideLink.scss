@@ -1,0 +1,16 @@
+.leftSideLink {
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        height: 100%;
+        width: 100%;
+        display: block;
+        &.active {
+            background: #494956;
+        }
+        &:hover {
+            background: #494956;
+        }
+    }
+}

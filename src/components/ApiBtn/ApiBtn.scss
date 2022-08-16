@@ -1,0 +1,45 @@
+.apiBtnContent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin apiBtnBg($bgColor) {
+    background: $bgColor !important;
+    &:hover {
+        background: darken($color: $bgColor, $amount: 10%) !important;
+    }
+}
+
+$api-colors: (
+    "get": #67b1fc,
+    "post": #a374d5,
+    "patch": #60e4c3,
+    "delete": #f9b6b6,
+    "put": #8a6a6a,
+    "update": #f9b6b6,
+);
+
+.apiBtn {
+    display: block;
+    color: black;
+    padding: 0.3rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 17px;
+    border-radius: 0.25rem;
+    min-width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    @each $api, $color in $api-colors {
+        &.#{$api} {
+            @include apiBtnBg($color);
+        }
+    }
+}

@@ -9,7 +9,9 @@ const SideMenu = () => {
         <div className="grid">
             <SidebarLeft />
             <div className="center">
-                <Outlet />
+                <div className="center-container">
+                    <Outlet />
+                </div>
             </div>
             <SidebarRight />
         </div>
