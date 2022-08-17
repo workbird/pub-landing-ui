@@ -87,8 +87,8 @@ export default function LeftSideContent() {
                     </div>
                 </Collapsable>
 
-                <LeftSideLink title="Other Details" link="#" />
-                <LeftSideLink title="API instances" link="#" />
+                <LeftSideLink title="Other Details" link="/about" />
+                <LeftSideLink title="API instances" link="/home" />
             </div>
         </div>
     );

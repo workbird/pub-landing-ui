@@ -6,17 +6,20 @@ import ServiceHeader from "./components/ServiceHeader/ServiceHeader";
 import ServiceSearch from "./components/ServiceSearch/ServiceSearch";
 import ServicesList from "./components/ServicesList/ServicesList";
 import "./Services.scss";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
     const [services, setServices] = useState([]);
     const [dropdown, setDropdown] = useState([]);
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         setServices(data);
         setDropdown(dropdownData);
     }, []);
 
-    const handleLike = (id) => {
+    const handleLike = (id, e) => {
+        e.stopPropagation();
         const servece = services.find((service) => service.id === id);
         const likes = servece.likes + 1;
         const newServices = services.map((service) => {
@@ -28,7 +31,8 @@ const Services = () => {
         setServices(newServices);
     };
 
-    const handleDislike = (id) => {
+    const handleDislike = (id, e) => {
+        e.stopPropagation();
         const servece = services.find((service) => service.id === id);
         const likes = servece.likes - 1;
         const newServices = services.map((service) => {
@@ -56,13 +60,16 @@ const Services = () => {
                     {services.map((service, index) => (
                         <ServicesList
                             key={index}
-                            onLike={() => handleLike(service.id)}
-                            onDislike={() => handleDislike(service.id)}
+                            onLike={(e) => handleLike(service.id, e)}
+                            onDislike={(e) => handleDislike(service.id, e)}
                             image={service.image}
                             connector={service.connector}
                             likes={service.likes}
                             organization={service.organization}
                             version={service.version}
+                            onClick={() =>
+                                navigate(`/dashboard?id=${service.id}`)
+                            }
                         />
                     ))}
                 </div>

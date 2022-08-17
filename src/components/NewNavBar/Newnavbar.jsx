@@ -108,11 +108,11 @@ const Newnavbar = () => {
                             <NavItem title="Home" route="/home" />
                             <NavItem title="About" route="/about" />
                             <NavItem title="Services" route="/services" />
-                            <NavItem title="Dashboard" route="/dashboard/" />
+                            {/* <NavItem title="Dashboard" route="/dashboard/" />
                             <NavItem
                                 title="Api Details"
                                 route="/dashboard/api"
-                            />
+                            /> */}
 
                             <li className="nav-item" data-aos="fade-in">
                                 <span className="nav-link ">

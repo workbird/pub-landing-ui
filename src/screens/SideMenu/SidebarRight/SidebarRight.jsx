@@ -3,7 +3,10 @@ import Collapsable from "../../../components/Collapsable/Collapsable";
 import ApiWithText from "../common/ApiWithText/ApiWithText";
 import "./SidebarRight.scss";
 
+import { useNavigate } from "react-router-dom";
+
 const SidebarRight = () => {
+    const navigate = useNavigate();
     const [isExpanded, setIsExpanded] = React.useState(null);
     return (
         <div className="right">
@@ -14,6 +17,7 @@ const SidebarRight = () => {
                         <ApiWithText
                             method={"get"}
                             text="/acadimicapi /qrcode"
+                            onClick={() => navigate(`/dashboard/api?id=1`)}
                         />
                     }
                     className="p-0 important"
@@ -30,12 +34,14 @@ const SidebarRight = () => {
                             text="https://api.paypal.com/v2/checkout/orders"
                             buttonClassName={"small"}
                             textClassName="small"
+                            onClick={() => navigate(`/dashboard/api?id=1`)}
                         />
                         <ApiWithText
                             method="Get"
                             text="https://api.paypal.com/v2/checkout/orders"
                             buttonClassName={"small"}
                             textClassName="small"
+                            onClick={() => navigate(`/dashboard/api?id=1`)}
                         />
                     </div>
                     <div className="rightColItems px-4 pt-4">
@@ -45,12 +51,14 @@ const SidebarRight = () => {
                             text="https://api.paypal.com/v2/checkout/orders"
                             buttonClassName={"small"}
                             textClassName="small"
+                            onClick={() => navigate(`/dashboard/api?id=1`)}
                         />
                         <ApiWithText
                             method="patch"
                             text="https://api.paypal.com/v2/checkout/orders"
                             buttonClassName={"small"}
                             textClassName="small"
+                            onClick={() => navigate(`/dashboard/api?id=1`)}
                         />
                     </div>
                 </Collapsable>

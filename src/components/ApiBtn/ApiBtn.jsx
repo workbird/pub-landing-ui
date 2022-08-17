@@ -8,12 +8,11 @@ export default function ApiBtn({
     buttonClassName,
 }) {
     return (
-        <div className={`apiBtnContent ${className || ""}`}>
+        <div className={`apiBtnContent ${className || ""}`} onClick={onClick}>
             <span
                 className={`apiBtn ${method?.toLowerCase() || "get"} ${
                     buttonClassName || ""
                 }`}
-                onClick={onClick}
             >
                 {method}
             </span>

@@ -15,6 +15,7 @@ const bodyDaata = [
 ];
 
 export default function QueryDescription() {
+    const [filter, setFilter] = React.useState(1);
     return (
         <div className="mt-5 queryDescription">
             <div className="bodyTabs ">
@@ -22,10 +23,19 @@ export default function QueryDescription() {
                 <ResponseTypes />
             </div>
 
-            <BodyFilter />
+            <BodyFilter onSelect={(d) => setFilter(d)} selected={filter} />
 
             <div className="codeViewer">
-                <ReactJson theme={"ashes"} src={bodyDaata} />
+                {filter === 1 && <ReactJson theme={"ashes"} src={bodyDaata} />}
+                {filter === 2 && (
+                    <pre>{JSON.stringify(bodyDaata, null, 2)}</pre>
+                )}
+                {filter === 3 && (
+                    <pre>{JSON.stringify(bodyDaata, null, 2)}</pre>
+                )}
+                {filter === 4 && (
+                    <pre>{JSON.stringify(bodyDaata, null, 2)}</pre>
+                )}
             </div>
         </div>
     );

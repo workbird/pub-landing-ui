@@ -11,15 +11,24 @@ const ServicesList = ({
     organization,
     onLike,
     onDislike,
+    onClick,
 }) => {
     return (
-        <div className="col ">
+        <div className="col " onClick={onClick}>
             <div className="card py-4">
                 <div className="d-flex justify-content-between align-items-center">
                     <p className="number">{likes}</p>
                     <div className="service-icon d-flex gap-1">
-                        <HiThumbUp size={30} className="likeDislikeBtn" onClick={onLike} />
-                        <HiThumbDown size={30} className="likeDislikeBtn" onClick={onDislike} />
+                        <HiThumbUp
+                            size={30}
+                            className="likeDislikeBtn"
+                            onClick={onLike}
+                        />
+                        <HiThumbDown
+                            size={30}
+                            className="likeDislikeBtn"
+                            onClick={onDislike}
+                        />
                     </div>
                 </div>
                 <div className="d-flex flex-column justify-content-center align-items-center">

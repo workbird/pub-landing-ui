@@ -1,7 +1,31 @@
 import React from "react";
 import "./ApiProtocols.scss";
+import ProtolFilter from "./components/ProtocolFilter/ProtocolFilter";
 
 export default function ApiProtocols() {
+    const protocols = [
+        {
+            _id: "1",
+            label: "HTTPS",
+        },
+        {
+            _id: "2",
+            label: "HTTP",
+        },
+        {
+            _id: "3",
+            label: "TCP",
+        },
+        {
+            _id: "4",
+            label: "UDP",
+        },
+    ];
+
+    const [selectedProtocol, setSelectedProtocol] = React.useState(
+        protocols[0]
+    );
+
     return (
         <div className="api">
             <div className="apiurlDescription">
@@ -15,9 +39,12 @@ export default function ApiProtocols() {
             </div>
             <div className="httpsLink">
                 <p className="dashApiHeaderSmall">Supported protocols</p>
-                <div className="apiType">
-                    <span>HTTPS</span>
-                </div>
+                <ProtolFilter
+                    selected={selectedProtocol?._id}
+                    onSelect={(pro) => setSelectedProtocol(pro)}
+                    data={protocols}
+                    title={selectedProtocol?.label}
+                />
                 <hr />
             </div>
         </div>
