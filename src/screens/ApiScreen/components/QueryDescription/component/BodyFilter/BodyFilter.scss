@@ -1,0 +1,26 @@
+@use "../../../../../../styles/" as *;
+
+.centerTabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectOptions {
+    select {
+        background: transparent;
+        color: #fff;
+        outline: none;
+        border: none;
+        text-transform: uppercase;
+        option {
+            color: rgb(32, 29, 29) !important;
+            border-radius: 5px;
+            background: #fff !important;
+            text-transform: uppercase;
+            &:hover {
+                background: #fff !important;
+                color: rgb(32, 29, 29) !important;
+            }
+        }
+    }
+}

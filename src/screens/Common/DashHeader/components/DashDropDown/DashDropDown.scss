@@ -52,6 +52,11 @@
 .dash-icon {
     position: absolute;
     right: 8px;
-    top: 14px;
+    top: 10px;
     color: #ffffff;
+
+    @include break("md") {
+        right: 8px;
+        top: 14px;
+    }
 }

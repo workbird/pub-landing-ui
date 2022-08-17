@@ -63,20 +63,14 @@ export default function SearchGroup() {
         );
     };
 
-    const Search = ({ onChange }) => {
-        return (
-            <div className="searchGroup">
-                <Selector data={selectorData} />
-                <input type="text" placeholder="Search" />
-                <Selector data={selector2Data} />
-            </div>
-        );
-    };
-
     return (
         <div>
             <h5 className="searchGroupTitle">Orders.Get</h5>
-            <Search />
+            <div className="searchGroup">
+                <Selector data={selectorData} />
+                <input type="text" placeholder="Search" />
+                <button className="searchGroupBtn">Send</button>
+            </div>
         </div>
     );
 }

@@ -1,7 +1,15 @@
+@use "../../../../styles/" as *;
+
 .apiWtext {
     word-break: break-all;
-    font-size: 1rem;
+    font-size: 0.8rem;
     &.small {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
+    }
+    @include break("md") {
+        font-size: 1rem;
+        &.small {
+            font-size: 0.7rem;
+        }
     }
 }

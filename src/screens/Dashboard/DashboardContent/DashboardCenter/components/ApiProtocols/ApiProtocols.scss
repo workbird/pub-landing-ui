@@ -39,7 +39,11 @@
         margin: 0;
         padding: 0;
     }
-    font-size: 1rem;
+    font-size: 0.8rem;
+    @include break("sm") {
+        padding: 1.2rem 1.6rem;
+        font-size: 1rem;
+    }
     @include break("md") {
         padding: 1.2rem 1.6rem;
         font-size: 1.2rem;
@@ -59,7 +63,7 @@
 }
 
 .dashApiHeaderSmall {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     @include break("md") {
         font-size: 1.5rem !important;
     }

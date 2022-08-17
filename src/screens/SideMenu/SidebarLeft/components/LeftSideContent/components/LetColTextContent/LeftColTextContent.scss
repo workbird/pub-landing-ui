@@ -1,6 +1,11 @@
+@use "../../../../../../../styles/" as *;
+
 .leftSideType {
     span {
         word-break: break-word;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        @include break("md") {
+            font-size: 1rem;
+        }
     }
 }

@@ -31,7 +31,7 @@ const dropDownData = [
 
 export default function ApiScreen() {
     return (
-        <div>
+        <div className="container px-xxl-8 pb-4">
             <DashHeader
                 title={"PayPal Orders API"}
                 dropDownData={dropDownData}

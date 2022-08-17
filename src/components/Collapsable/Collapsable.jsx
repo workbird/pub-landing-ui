@@ -25,7 +25,7 @@ export default function Collapsable({
                     titleClassName || ""
                 }`}
             >
-                <div>{headerComp ? headerComp : <h5>{title}</h5>}</div>
+                {headerComp ? headerComp : <h5>{title}</h5>}
                 <ArrowForwardIosOutlinedIcon
                     className={`collapsableChevronIcon ${
                         chevronClassName || ""

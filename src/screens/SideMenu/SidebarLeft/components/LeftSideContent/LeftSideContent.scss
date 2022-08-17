@@ -1,3 +1,5 @@
+@use "../../../../../styles/" as *;
+
 .lsnTitle {
     cursor: pointer;
     h1,
@@ -10,7 +12,10 @@
         padding: 0;
         margin: 0;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        @include break("md") {
+            font-size: 1.2rem;
+        }
     }
 }
 

@@ -1,0 +1,43 @@
+.services {
+    background-color: #151422;
+    padding-top: 70px;
+}
+
+.services-btn {
+    text-decoration: none !important;
+    color: black;
+    background-color: #4ad9ec;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+}
+
+.services-btns {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+.input-group button {
+    background-color: #707070;
+    color: #fafafa;
+    text-transform: none;
+}
+.input-group input {
+    padding: 1.5rem 0.5rem !important;
+    background-color: #29283a;
+    border: none;
+}
+.form-control::placeholder {
+    color: #fafafa;
+    padding-left: 30px;
+}
+.input-group {
+    position: relative;
+}
+.search-icon {
+    color: #fafafa;
+    position: absolute;
+    top: 25%;
+    left: 110px;
+    z-index: 1;
+}

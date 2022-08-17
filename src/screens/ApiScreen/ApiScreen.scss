@@ -1,0 +1,13 @@
+@use "../../styles/" as *;
+
+.px-lg-6 {
+    @include break("lg") {
+        padding: 0 2rem !important;
+    }
+}
+.px-xxl-8 {
+    padding-bottom: 4rem;
+    @include break("xxl") {
+        padding: 0 4rem !important;
+    }
+}

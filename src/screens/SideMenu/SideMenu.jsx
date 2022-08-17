@@ -8,7 +8,7 @@ const SideMenu = () => {
     return (
         <div className="grid">
             <SidebarLeft />
-            <div className="center">
+            <div className="center ">
                 <div className="center-container">
                     <Outlet />
                 </div>

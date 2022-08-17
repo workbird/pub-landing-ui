@@ -13,7 +13,11 @@ export default function QueryTableBody({ appendValue, removeValue, initial }) {
     };
 
     React.useEffect(() => {
-        if (values?.keys.length > 0) {
+        if (
+            values?.keys.length > 0 ||
+            values?.values.length > 0 ||
+            values?.description.length > 0
+        ) {
             appendValue?.(values);
         }
     }, [values]);

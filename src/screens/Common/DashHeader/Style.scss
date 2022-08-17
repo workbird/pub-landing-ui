@@ -2,25 +2,25 @@
 
 .dashLogo {
     width: 72px !important;
-    height: 42px !important;
+    height: 50px !important;
     @include break("sm") {
         width: 80px !important;
         height: 60px !important;
     }
     @include break("md") {
-        width: 100px !important;
-        height: 80px !important;
+        width: 85px !important;
+        height: 70px !important;
     }
 }
 
 .dash-imageContent {
     h3 {
-        font-size: 1.2rem !important;
+        font-size: 0.9rem !important;
         @include break("sm") {
-            font-size: 1.4rem !important;
+            font-size: 1rem !important;
         }
         @include break("md") {
-            font-size: 1.6rem !important;
+            font-size: 1.3rem !important;
         }
         @include break("xl") {
             font-size: 1.8rem !important;

@@ -1,16 +1,32 @@
+@use "../../../../styles/" as *;
+
 $border: 2px solid #70707060;
+$fontSize: 0.85rem;
+$fontSizeSm: 1rem;
+$fontSizeMd: 1.3rem;
 
 .queryParamsTitle {
-    font-size: 1.3rem;
+    font-size: $fontSize;
     padding-left: 1rem;
-    
+    @include break("sm") {
+        font-size: $fontSizeSm;
+    }
+    @include break("md") {
+        font-size: $fontSizeMd;
+    }
 }
 
 .queryTableHeader {
-    font-size: 1.4rem;
+    font-size: $fontSize;
+    @include break("sm") {
+        font-size: $fontSizeSm;
+    }
+    @include break("md") {
+        font-size: $fontSizeMd;
+    }
 }
 .queryTableInput {
-    font-size: 1.3rem;
+    font-size: $fontSize;
     outline: none;
     border: none;
     background: transparent;
@@ -20,6 +36,12 @@ $border: 2px solid #70707060;
     text-align: center;
     &::placeholder {
         color: #707070;
+    }
+    @include break("sm") {
+        font-size: $fontSizeSm;
+    }
+    @include break("md") {
+        font-size: $fontSizeMd;
     }
 }
 

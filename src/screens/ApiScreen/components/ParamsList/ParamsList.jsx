@@ -13,7 +13,7 @@ export default function ParamsList() {
     ];
     return (
         <div>
-            <div className="paramList d-flex">
+            <div className="paramList">
                 {params.map((param, index) => {
                     return (
                         <div key={param + index} className="paramListItem">

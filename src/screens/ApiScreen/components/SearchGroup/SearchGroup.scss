@@ -1,37 +1,63 @@
+@use "../../../../styles/" as *;
+
 $btnWidth: 11.5rem;
 $inputWidth: calc(100% - $btnWidth);
-$fonSize: 1.3rem;
+$fonSize: 0.8rem;
+$fonSizeSm: 0.9rem;
+$fonSizeMd: 1.3rem;
 
 .searchGroup {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 70px;
+    display: grid;
+    grid-template-columns: 1.3fr auto 1.3fr;
+    grid-gap: 0.4rem;
+    height: 3rem;
     border-radius: 5px;
     overflow: hidden;
+
+    background: #727179;
+    @include break("sm") {
+        height: 3.5rem;
+        grid-template-columns: 8rem auto 8rem;
+        grid-gap: 1rem;
+    }
+    @include break("md") {
+        height: 4.5rem;
+        grid-template-columns: 10rem auto 10rem;
+    }
     input {
-        width: $inputWidth;
         outline: none;
         border: none;
         padding: 0;
         margin: 0;
         height: 100%;
-        background: #727179;
-        padding: 0.5rem 1.5rem;
+        background: transparent;
+        padding: 0.5rem 0;
         color: #ffffff;
         font-size: $fonSize;
+        @include break("sm") {
+            font-size: $fonSizeSm;
+        }
+        @include break("md") {
+            font-size: $fonSizeMd;
+        }
     }
 }
 
 .searchGroupTitle {
     font-weight: 500;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    @include break("md") {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin common() {
+    background: #aaa9ae !important;
 }
 
 .searchGroupDropDown {
-    width: $btnWidth;
-    background: #aaa9ae !important;
+    @include common();
     position: relative;
     cursor: pointer;
     outline: none;
@@ -43,21 +69,52 @@ $fonSize: 1.3rem;
         border: none;
         outline: none;
         border: none !important;
-        font-size: $fonSize;
+
         background: transparent !important;
         width: 100%;
         height: 100%;
         padding-left: 24px !important;
         text-transform: uppercase;
+        font-size: $fonSize;
+        @include break("sm") {
+            font-size: $fonSizeSm;
+        }
+        @include break("md") {
+            font-size: $fonSizeMd;
+        }
     }
 }
 
-.searchGroupDropDownOptions {
+.searchGroupBtn {
+    @include common();
+    outline: none;
+    border: none;
+    font-size: $fonSize;
+    text-transform: uppercase;
+    font-size: $fonSize;
+    @include break("sm") {
+        font-size: $fonSizeSm;
+    }
+    @include break("md") {
+        font-size: $fonSizeMd;
+    }
 }
 
 .searchGroupDropDownIcon {
     cursor: auto !important;
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 10px;
+    svg {
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    @include break("md") {
+        top: 22px;
+        right: 10px;
+        svg {
+            width: 1.5rem !important;
+            height: 1.5rem !important;
+        }
+    }
 }

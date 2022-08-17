@@ -1,3 +1,5 @@
+@use "../../styles/" as *;
+
 $mainTitleLeftPadding: 1rem;
 
 .colapsableMenu {
@@ -40,7 +42,10 @@ $mainTitleLeftPadding: 1rem;
         padding: 0.2rem 0;
         margin: 0;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        @include break("md") {
+            font-size: 1.2rem;
+        }
     }
     &:hover {
         background: #333242;
