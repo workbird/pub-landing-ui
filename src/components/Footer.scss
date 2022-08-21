@@ -1,3 +1,5 @@
+@use "../styles/" as *;
+
 /* body {
      background: #ff5f6d;
      background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
@@ -110,5 +112,13 @@ footer {
     .logo {
         width: 75% !important;
         margin: 0 !important;
+    }
+}
+
+.contain {
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
+    @include break("md") {
+        max-width: calc(100% - 140px);
     }
 }

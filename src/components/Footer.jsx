@@ -37,7 +37,7 @@ function Footer() {
 
     return (
         <footer className="m-0 p-0">
-            <div className="container">
+            <div className="contain">
                 <div className=" py-5 m-0">
                     <div className="row py-4 m-0">
                         <div className="col-lg-4 col-md-6 m-0 mb-4 mb-lg-0 px-5 ">
@@ -362,15 +362,14 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-
-                {/* <!-- Copyrights --> */}
-                <div className="bg-dark py-4">
-                    <div className="container text-center">
-                        <p className="text-white mb-0 py-2 text-capitalize">
-                            copyright © 2022 Workbird privacy Policy terms and
-                            conditions
-                        </p>
-                    </div>
+            </div>
+            {/* <!-- Copyrights --> */}
+            <div className="bg-dark py-4">
+                <div className="container text-center">
+                    <p className="text-white mb-0 py-2 text-capitalize">
+                        copyright © 2022 Workbird privacy Policy terms and
+                        conditions
+                    </p>
                 </div>
             </div>
         </footer>
