@@ -1,19 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./LetSideLink.scss";
 
-export default function LeftSideLink({ title, link }) {
+export default function LeftSideLink({ title, link, isActive, onClick }) {
+    const cn = isActive ? "py-3 ps-4 active" : "py-3 px-4";
     return (
         <div className="leftSideLink">
-            <NavLink
-                to={link}
-                className={(cn) => {
-                    console.log(cn);
-                    return cn.isActive ? "py-3 ps-4 active" : "py-3 px-4";
-                }}
-            >
+            <span onClick={onClick} to={link} className={cn}>
                 {title}
-            </NavLink>
+            </span>
         </div>
     );
 }

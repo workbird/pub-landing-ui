@@ -1,9 +1,9 @@
-import { Route, Routes,Outlet } from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import "./App.css";
 import Newnavbar from "./components/NewNavBar/Newnavbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import About from './screens/About/About';
+import About from "./screens/About/About";
 import ApiScreen from "./screens/ApiScreen/ApiScreen";
 import Dashboard from "./screens/Dashboard/Dashboard";
 import Services from "./screens/Services/Services";
@@ -23,6 +23,15 @@ function App() {
         <>
             <Newnavbar />
             <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Home />
+                            <Footer />
+                        </>
+                    }
+                />
                 <Route path="/" element={<HomeRoute />}>
                     <Route path="/home" element={<Home />} />
                     <Route path="/services" element={<Services />} />

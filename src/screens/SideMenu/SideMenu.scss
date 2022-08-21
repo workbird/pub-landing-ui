@@ -7,7 +7,7 @@ $rightPanelWidth: 350px;
     display: grid;
     @include break(xl) {
         height: 100vh;
-        grid-template-columns: $leftPanelWidth auto $rightPanelWidth;
+        grid-template-columns: $leftPanelWidth auto;
     }
 }
 

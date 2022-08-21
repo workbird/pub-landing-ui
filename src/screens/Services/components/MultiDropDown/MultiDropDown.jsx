@@ -8,13 +8,13 @@ export default function MultiDropDown() {
             <Dropdown
                 menuClassName="dropMenu"
                 title="Dropdown title"
-                position="right"
                 wrapperClassName="dropWrapper"
+                position="right"
             >
                 <Dropdown.Item>Item 1</Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item position="right">
                     Item 2
-                    <Dropdown.Submenu>
+                    <Dropdown.Submenu position="right">
                         <Dropdown.Item>Subitem 1</Dropdown.Item>
                         <Dropdown.Item>Subitem 1</Dropdown.Item>
                         <Dropdown.Item>Subitem 1</Dropdown.Item>
@@ -23,7 +23,7 @@ export default function MultiDropDown() {
                 </Dropdown.Item>
                 <Dropdown.Item>
                     Item 3
-                    <Dropdown.Submenu>
+                    <Dropdown.Submenu position="right">
                         <Dropdown.Item>Subitem 1</Dropdown.Item>
                         <Dropdown.Item>Subitem 1</Dropdown.Item>
                         <Dropdown.Item>Subitem 1</Dropdown.Item>

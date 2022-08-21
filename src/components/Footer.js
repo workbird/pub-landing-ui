@@ -1,5 +1,5 @@
 import logo from "../Group 692.png";
-import "./Footer.css";
+import "./Footer.scss";
 // import bg from '../img/background-bubble-header.PNG';
 
 // get our fontawesome imports
@@ -297,6 +297,7 @@ function Footer() {
                                 data-aos="fade-left"
                                 data-aos-easing="linear"
                                 data-aos-duration="1500"
+
                             />
                             <ThemeProvider theme={socialBtnTheme}>
                                 <Button

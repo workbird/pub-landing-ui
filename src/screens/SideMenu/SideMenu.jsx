@@ -1,19 +1,29 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import SidebarLeft from "./SidebarLeft/SidebarLeft";
-import SidebarRight from "./SidebarRight/SidebarRight";
 import "./SideMenu.scss";
 
 const SideMenu = () => {
+    const [activeLink, setActiveLink] = React.useState("");
+
     return (
         <div className="grid">
-            <SidebarLeft />
+            <SidebarLeft
+                onClick={(type) => {
+                    if (type === activeLink) {
+                        setActiveLink("");
+                        setActiveLink(type);
+                    } else {
+                        setActiveLink(type);
+                    }
+                }}
+                active={activeLink}
+            />
             <div className="center ">
                 <div className="center-container">
-                    <Outlet />
+                    <Outlet context={[activeLink, setActiveLink]} />
                 </div>
             </div>
-            <SidebarRight />
         </div>
     );
 };
