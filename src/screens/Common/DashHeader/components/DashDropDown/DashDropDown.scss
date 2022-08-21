@@ -31,20 +31,20 @@
         padding-bottom: 0.7rem !important;
         padding-left: 1.5rem !important;
         padding-right: 6rem !important;
-        font-size: 1rem;
+        font-size: 0.8rem;
         border-radius: 12px !important;
     }
 
     @include break("md") {
         border: 4px solid #4ad9ec;
         select {
-            font-size: 1.2rem !important;
+            font-size: 1rem !important;
         }
     }
     @include break("xl") {
         border: 4px solid #4ad9ec;
         select {
-            font-size: 1.5rem !important;
+            font-size: 1.1rem !important;
         }
     }
 }

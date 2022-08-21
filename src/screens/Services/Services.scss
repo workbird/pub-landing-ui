@@ -1,3 +1,5 @@
+@use "../../styles/" as *;
+
 .services {
     background-color: #151422;
     padding-top: 70px;
@@ -40,4 +42,16 @@
     top: 25%;
     left: 110px;
     z-index: 1;
+}
+
+.multiDropDownItems {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    @include break("lg") {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

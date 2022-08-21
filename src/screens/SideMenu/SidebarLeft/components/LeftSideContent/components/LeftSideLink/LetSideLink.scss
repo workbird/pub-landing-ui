@@ -5,7 +5,7 @@
     span {
         text-decoration: none;
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.8rem;
         height: 100%;
         width: 100%;
         display: block;
@@ -17,7 +17,7 @@
             background: #494956;
         }
         @include break("md") {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 }

@@ -6,7 +6,7 @@ export default function ApiDetails({ apiTitle, apiVersion }) {
         <div className="apiDescription">
             <h6 className="apiDetailTitle">API specification summary</h6>
             <p className=" apiDescSummary">API title: {apiTitle} </p>
-            <p className="mb-3 mb-md-5 apiDescSummary">Version: {apiVersion}</p>
+            <p className="mb-2 mb-md-4 apiDescSummary">Version: {apiVersion}</p>
         </div>
     );
 }

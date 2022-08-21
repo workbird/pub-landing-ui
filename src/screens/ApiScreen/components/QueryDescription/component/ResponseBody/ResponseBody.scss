@@ -40,9 +40,9 @@
         font-size: 0.7rem;
     }
     @include break("md") {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     @include break("xl") {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }

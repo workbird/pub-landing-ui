@@ -12,6 +12,13 @@
         outline: none;
         border: none;
         text-transform: uppercase;
+        font-size: 0.8rem;
+        @include break("sm") {
+            font-size: 0.9rem;
+        }
+        @include break("md") {
+            font-size: 1rem;
+        }
         option {
             color: rgb(32, 29, 29) !important;
             border-radius: 5px;

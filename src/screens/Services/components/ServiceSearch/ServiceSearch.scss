@@ -1,3 +1,5 @@
+@use "../../../../styles/" as *;
+
 .searchInput {
     outline: none !important;
     border: none !important;
@@ -11,8 +13,22 @@
 
 .searchArea {
     display: grid;
-    grid-template-columns: 150px auto;
+    grid-template-columns: 100px auto;
     border-radius: 1rem;
+    button {
+        outline: none !important;
+        border: none !important;
+    }
+    * {
+        font-size: 0.8rem !important;
+        @include break("md") {
+            font-size: 1rem !important;
+        }
+    }
+    @include break("md") {
+        grid-template-columns: 150px auto;
+        font-size: 1rem !important;
+    }
 }
 
 .searchinput {

@@ -1,28 +1,26 @@
 @use "../../../../styles/" as *;
 
-$btnWidth: 11.5rem;
+$btnWidth: 7.5rem;
 $inputWidth: calc(100% - $btnWidth);
 $fonSize: 0.8rem;
 $fonSizeSm: 0.9rem;
-$fonSizeMd: 1.3rem;
+$fonSizeMd: 1.2rem;
 
 .searchGroup {
     display: grid;
-    grid-template-columns: 1.3fr auto 1.3fr;
+    grid-template-columns: 6rem auto 6rem;
     grid-gap: 0.4rem;
-    height: 3rem;
+
     border-radius: 5px;
     overflow: hidden;
 
     background: #727179;
     @include break("sm") {
-        height: 3.5rem;
-        grid-template-columns: 8rem auto 8rem;
+        grid-template-columns: 6rem auto 6rem;
         grid-gap: 1rem;
     }
     @include break("md") {
-        height: 4.5rem;
-        grid-template-columns: 10rem auto 10rem;
+        grid-template-columns: 8rem auto 8rem;
     }
     input {
         outline: none;
@@ -46,9 +44,9 @@ $fonSizeMd: 1.3rem;
 .searchGroupTitle {
     font-weight: 500;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     @include break("md") {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -86,6 +84,8 @@ $fonSizeMd: 1.3rem;
 }
 
 .searchGroupBtn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include common();
     outline: none;
     border: none;
@@ -97,6 +97,8 @@ $fonSizeMd: 1.3rem;
     }
     @include break("md") {
         font-size: $fonSizeMd;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
     }
 }
 
@@ -110,7 +112,7 @@ $fonSizeMd: 1.3rem;
         height: 1rem !important;
     }
     @include break("md") {
-        top: 22px;
+        top: 0.9rem;
         right: 10px;
         svg {
             width: 1.5rem !important;

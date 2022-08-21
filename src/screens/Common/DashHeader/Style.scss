@@ -1,6 +1,7 @@
 @use "../../../styles/" as *;
 
 .dashLogo {
+    object-fit: contain;
     width: 72px !important;
     height: 50px !important;
     @include break("sm") {
@@ -8,12 +9,17 @@
         height: 60px !important;
     }
     @include break("md") {
-        width: 85px !important;
-        height: 70px !important;
+        width: 70px !important;
+        height: 80px !important;
     }
 }
 
 .dash-imageContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+
     h3 {
         font-size: 0.9rem !important;
         @include break("sm") {
@@ -23,7 +29,7 @@
             font-size: 1.3rem !important;
         }
         @include break("xl") {
-            font-size: 1.8rem !important;
+            font-size: 1.5rem !important;
         }
     }
 }

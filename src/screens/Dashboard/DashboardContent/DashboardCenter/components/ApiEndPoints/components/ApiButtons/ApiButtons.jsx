@@ -8,13 +8,28 @@ export default function ApiButtons({ methods, onClick, title }) {
     return (
         <div className="apiButtons">
             <h6 className="apiBtnTitle">{title}</h6>
+
             {methods?.map((method, index) => {
                 return (
-                    <ApiBtn
+                    <div
+                        className="d-flex justify-content-between align-items-center  my-2 "
                         key={index}
-                        method={method}
-                        onClick={() => navigate(`/dashboard/api?id=${index}`)}
-                    />
+                    >
+                        <ApiBtn
+                            method={method}
+                            onClick={() =>
+                                navigate(`/dashboard/api?id=${index}`)
+                            }
+                        />
+                        <button
+                            onClick={() =>
+                                navigate(`/dashboard/api?id=${index}`)
+                            }
+                            className="btn btn-primary viewBtn"
+                        >
+                            Try
+                        </button>
+                    </div>
                 );
             })}
         </div>

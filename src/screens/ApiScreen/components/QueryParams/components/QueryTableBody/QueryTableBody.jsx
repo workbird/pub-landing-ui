@@ -29,7 +29,7 @@ export default function QueryTableBody({ appendValue, removeValue, initial }) {
                 <input
                     type="text"
                     placeholder="Keys"
-                    className="queryTableInput p-1 p-md-2 p-lg-3 p-xl-4"
+                    className="queryTableInput p-1 p-md-2 p-lg-3 "
                     name="keys"
                     value={values.keys}
                     onChange={handleChange}
@@ -39,7 +39,7 @@ export default function QueryTableBody({ appendValue, removeValue, initial }) {
                 <input
                     type="text"
                     placeholder="Values"
-                    className="queryTableInput p-1 p-md-2 p-lg-3 p-xl-4"
+                    className="queryTableInput p-1 p-md-2 p-lg-3 "
                     name="values"
                     value={values.values}
                     onChange={handleChange}
@@ -49,7 +49,7 @@ export default function QueryTableBody({ appendValue, removeValue, initial }) {
                 <input
                     type="text"
                     placeholder="Description"
-                    className="queryTableInput p-1 p-md-2 p-lg-3 p-xl-4"
+                    className="queryTableInput p-1 p-md-2 p-lg-3 "
                     name="description"
                     value={values.description}
                     onChange={handleChange}

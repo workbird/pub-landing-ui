@@ -47,7 +47,7 @@ const Services = () => {
     return (
         <div className="services">
             <div className="container py-5">
-                <div className="d-flex justify-content-between mb-5">
+                <div className="multiDropDownItems">
                     {dropdown.map((drop, key) => (
                         <MultiDropDown key={key} />
                     ))}
