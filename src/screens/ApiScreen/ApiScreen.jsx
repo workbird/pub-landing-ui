@@ -30,6 +30,10 @@ const dropDownData = [
 ];
 
 export default function ApiScreen() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="container px-xxl-8 pb-4">
             <DashHeader

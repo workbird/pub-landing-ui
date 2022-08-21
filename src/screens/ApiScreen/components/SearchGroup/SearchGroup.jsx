@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { ApiUrlContext } from "../../../../context/contexts";
 import "./SearchGroup.scss";
 
 export default function SearchGroup() {
@@ -63,12 +64,18 @@ export default function SearchGroup() {
         );
     };
 
+    const urlCtx = React.useContext(ApiUrlContext);
+
     return (
         <div>
             <h5 className="searchGroupTitle">Orders.Get</h5>
             <div className="searchGroup">
                 <Selector data={selectorData} />
-                <input type="text" placeholder="Search" />
+                <input
+                    type="text"
+                    placeholder="Search"
+                    value={urlCtx?.url?.url}
+                />
                 <button className="searchGroupBtn">Send</button>
             </div>
         </div>

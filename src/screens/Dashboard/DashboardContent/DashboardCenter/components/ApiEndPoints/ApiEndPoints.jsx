@@ -6,19 +6,38 @@ export default function ApiEndPoints({ apiTitle, endPoints = [] }) {
     const endpoins = [
         {
             title: "/orders",
-            methods: ["POST"],
+            methods: [
+                {
+                    method: "GET",
+                    url: "https://localhost/orders",
+                },
+            ],
         },
         {
             title: "/orders/:id",
-            methods: ["GET", "PUT", "DELETE"],
+            methods: [
+                { method: "GET", url: "https://localhost/orders/:id" },
+                { method: "PUT", url: "https://localhost/orders/:id" },
+                { method: "DELETE", url: "https://localhost/orders/:id" },
+            ],
         },
         {
             title: "/orders/:id/payments",
-            methods: ["POST"],
+            methods: [
+                {
+                    method: "POST",
+                    url: "https://localhost/orders/:id/payments",
+                },
+            ],
         },
         {
             title: "/payments/capture",
-            methods: ["POST"],
+            methods: [
+                {
+                    method: "POST",
+                    url: "https://localhost/payments/capture",
+                },
+            ],
         },
     ];
     return (

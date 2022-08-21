@@ -6,7 +6,7 @@ export default function ServiceHeader({ title }) {
             <h2 className="text-white text-uppercase">{title}</h2>
             <div className="services-btns">
                 <a className="services-btn" href="#">
-                    Custom Api
+                    Custom Services
                 </a>
             </div>
         </div>

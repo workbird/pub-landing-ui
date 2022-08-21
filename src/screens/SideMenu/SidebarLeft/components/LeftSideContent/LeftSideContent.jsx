@@ -6,18 +6,10 @@ import "./LeftSideContent.scss";
 
 export default function LeftSideContent({ onClick, active }) {
     return (
-        <div className="leftSideNavContent">
-            <div className="pt-4 ">
-                <div className="lsnTitle py-3 px-4">
-                    <h5>PAGES</h5>
-                </div>
-                <div className="lsnTitle py-3 px-4">
-                    <h5>SPECIFICATION</h5>
-                </div>
-            </div>
+        <div className="leftSideNavContent mt-4">
             {/* apiSummary apiEndpoints */}
             <LeftSideLink
-                title="Summary"
+                title="Specfications"
                 onClick={() => onClick("summary")}
                 // isActive={active === "summary"}
             />
@@ -28,7 +20,8 @@ export default function LeftSideContent({ onClick, active }) {
             />
             <LeftSideLink title="Types" />
             <LeftSideLink title="Security" />
-            <LeftSideLink title="Other Details" />
+            <LeftSideLink title="Summary" />
+
             <LeftSideLink title="API instances" />
         </div>
     );

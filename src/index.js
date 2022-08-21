@@ -5,13 +5,16 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
+import { ApiUrlProvider } from "./context/provider/ApiUrlProvider";
 
 
 ReactDOM.render(
     <React.StrictMode>
+        <ApiUrlProvider >
         <BrowserRouter>
             <App />
         </BrowserRouter>
+        </ApiUrlProvider>
     </React.StrictMode>,
     document.getElementById("root")
 );

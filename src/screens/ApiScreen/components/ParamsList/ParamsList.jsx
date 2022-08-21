@@ -2,15 +2,7 @@ import React from "react";
 import "./ParamsList.scss";
 
 export default function ParamsList() {
-    const params = [
-        "Params",
-        "Params",
-        "Params",
-        "Params",
-        "Params",
-        "Params",
-        "Params",
-    ];
+    const params = ["GET", "POST", "PUT", "DELETE", "PATCH", "GET", "UPDATE"];
     return (
         <div>
             <div className="paramList">

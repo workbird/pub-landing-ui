@@ -52,7 +52,7 @@ const Services = () => {
                         <MultiDropDown key={key} />
                     ))}
                 </div>
-                <ServiceHeader title={"lorem ipsum"} />
+                <ServiceHeader title={"Service Hub"} />
 
                 <ServiceSearch />
 
