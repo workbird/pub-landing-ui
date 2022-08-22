@@ -12,7 +12,6 @@ $fonSizeMd: 1.2rem;
     grid-gap: 0.4rem;
 
     border-radius: 5px;
-    overflow: hidden;
 
     background: #727179;
     @include break("sm") {
@@ -30,6 +29,7 @@ $fonSizeMd: 1.2rem;
         height: 100%;
         background: transparent;
         padding: 0.5rem 0;
+
         color: #ffffff;
         font-size: $fonSize;
         @include break("sm") {
@@ -59,27 +59,22 @@ $fonSizeMd: 1.2rem;
     position: relative;
     cursor: pointer;
     outline: none;
-    overflow: hidden;
+
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+
     display: flex;
     justify-content: space-between;
-    select {
-        appearance: none;
-        border: none;
-        outline: none;
-        border: none !important;
-
-        background: transparent !important;
-        width: 100%;
-        height: 100%;
-        padding-left: 24px !important;
-        text-transform: uppercase;
-        font-size: $fonSize;
-        @include break("sm") {
-            font-size: $fonSizeSm;
+    &.show {
+        .searchGroupList {
+            max-height: 500px;
         }
-        @include break("md") {
-            font-size: $fonSizeMd;
+        .searchGroupDropDownIcon {
+            transform: rotate(180deg);
         }
+    }
+    &:hover {
+        background: lighten($color: #aaa9ae, $amount: 20%) !important;
     }
 }
 
@@ -92,6 +87,8 @@ $fonSizeMd: 1.2rem;
     font-size: $fonSize;
     text-transform: uppercase;
     font-size: $fonSize;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     @include break("sm") {
         font-size: $fonSizeSm;
     }
@@ -100,13 +97,16 @@ $fonSizeMd: 1.2rem;
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
     }
+    &:hover {
+        background: lighten($color: #aaa9ae, $amount: 20%) !important;
+    }
 }
 
 .searchGroupDropDownIcon {
     cursor: auto !important;
-    position: absolute;
-    top: 12px;
-    right: 10px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+
     svg {
         width: 1rem !important;
         height: 1rem !important;
@@ -119,4 +119,36 @@ $fonSizeMd: 1.2rem;
             height: 1.5rem !important;
         }
     }
+}
+
+.searchGroupList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: rgb(121, 84, 98);
+    width: 100%;
+    top: 100%;
+    max-height: 0;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    li {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #607072;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            background: #979595;
+        }
+    }
+}
+
+.searchGroupDropDownTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #000000;
 }

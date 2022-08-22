@@ -21,3 +21,19 @@
     padding: 0.2rem 1.5rem;
     font-size: small;
 }
+
+.methodDesc {
+    background: rgb(61, 53, 53);
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+}
+
+.methodeUrl {
+    font-size: small;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0 0.5rem;
+    @include break("md") {
+        font-size: 14px;
+    }
+}

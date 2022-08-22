@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { ApiUrlContext } from "../../../../context/contexts";
+import InputEl from "./components/InputEl/InputEl";
 import "./SearchGroup.scss";
 
 export default function SearchGroup() {
@@ -42,41 +43,66 @@ export default function SearchGroup() {
     ];
 
     const Selector = ({ selected, onSelect, data }) => {
+        const [isOpen, setIsOpen] = React.useState(false);
+
+        React.useEffect(() => {
+            document.body.addEventListener("click", (e) => {
+                setIsOpen(false);
+            });
+        }, []);
+
         return (
-            <div className=" searchGroupDropDown">
-                <select
-                    className=" searchGroupDropDownOptions"
-                    onChange={onSelect}
-                    value={selected}
-                >
+            <div
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setIsOpen((prev) => !prev);
+                }}
+                className={`searchGroupDropDown ${isOpen ? "show" : ""}`}
+            >
+                <div className="searchGroupDropDownTitle" onChange={onSelect}>
+                    <span>{selected?.label}</span>
+                    <HiOutlineChevronDown
+                        className="searchGroupDropDownIcon"
+                        color="#000"
+                        size={24}
+                    />
+                </div>
+
+                <ul className="searchGroupList">
                     {data?.map((item, index) => {
                         return (
-                            <option key={index} value={item.value}>
+                            <li
+                                key={index}
+                                onClick={(e) => {
+                                    setIsOpen(false);
+                                    onSelect(item);
+                                }}
+                            >
                                 {item.label}
-                            </option>
+                            </li>
                         );
                     })}
-                </select>
-                <span className="searchGroupDropDownIcon">
-                    <HiOutlineChevronDown color="#000" size={24} />
-                </span>
+                </ul>
             </div>
         );
     };
 
     const urlCtx = React.useContext(ApiUrlContext);
 
+    const [value, setValue] = React.useState(urlCtx?.url?.url);
+    const [selected, setSelected] = React.useState(selectorData[0]);
+
     return (
         <div>
             <h5 className="searchGroupTitle">Orders.Get</h5>
             <div className="searchGroup">
-                <Selector data={selectorData} />
-                <input
-                    type="text"
-                    placeholder="Search"
-                    value={urlCtx?.url?.url}
+                <Selector
+                    data={selectorData}
+                    selected={selected}
+                    onSelect={(sel) => setSelected(sel)}
                 />
-                <button className="searchGroupBtn">Send</button>
+                <InputEl value={value} setValue={(val) => setValue(val)} />
+                <button className="searchGroupBtn">Try</button>
             </div>
         </div>
     );

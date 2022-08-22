@@ -12,20 +12,20 @@ const dropDownData = [
         value: "10.4 x",
     },
     {
-        label: "10.4 x",
-        value: "10.4 x",
+        label: "10.3 x",
+        value: "10.3 x",
     },
     {
-        label: "10.4 x",
-        value: "10.4 x",
+        label: "10.2 x",
+        value: "10.2 x",
     },
     {
-        label: "10.4 x",
-        value: "10.4 x",
+        label: "10.1 x",
+        value: "10.1 x",
     },
     {
-        label: "10.4 x",
-        value: "10.4 x",
+        label: "10.0 x",
+        value: "10.0 x",
     },
 ];
 

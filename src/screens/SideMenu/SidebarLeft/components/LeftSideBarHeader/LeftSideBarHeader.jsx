@@ -7,15 +7,14 @@ export default function LeftSideBarHeader() {
     const navigate = useNavigate();
     return (
         <div className="left-header">
-            <div className="d-flex justify-content-left align-items-center gap-3 p-3">
+            <div
+                onClick={() => navigate(-1)}
+                className="d-flex justify-content-left align-items-center gap-3 p-3"
+            >
                 <span className="leftArrow">
-                    <HiArrowLeft
-                        onClick={() => navigate(-1)}
-                        size={24}
-                        color="#67B1FC"
-                    />
+                    <HiArrowLeft size={24} color="#67B1FC" />
                 </span>
-                <h4 className="leftHeaderTitle">ACCESS LIST</h4>
+                <h4 className="leftHeaderTitle">ASSETS LIST</h4>
             </div>
         </div>
     );

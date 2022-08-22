@@ -11,6 +11,10 @@
     background-color: #4ad9ec;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($color: #4ad9ec, $amount: 20);
+    }
 }
 
 .services-btns {

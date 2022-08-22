@@ -4,7 +4,7 @@ import DashDropDown from "./components/DashDropDown/DashDropDown";
 import "./Style.scss";
 
 export default function DashHeader({ title, dropDownData }) {
-    const [value, setValue] = React.useState(dropDownData?.[0].value);
+    const [value, setValue] = React.useState(dropDownData?.[0]);
 
     return (
         <div className="center-content-head">
