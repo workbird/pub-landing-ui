@@ -47,15 +47,3 @@
     left: 110px;
     z-index: 1;
 }
-
-.multiDropDownItems {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    gap: 1rem;
-    @include break("lg") {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}

@@ -1,13 +1,13 @@
 @use "../../../../../styles/" as *;
 
 .leftHeaderTitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
     font-weight: 400;
     cursor: pointer;
     @include break("md") {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }

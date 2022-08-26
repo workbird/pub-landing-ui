@@ -102,7 +102,7 @@ export default function SearchGroup() {
                     onSelect={(sel) => setSelected(sel)}
                 />
                 <InputEl value={value} setValue={(val) => setValue(val)} />
-                <button className="searchGroupBtn">Try</button>
+                <button className="searchGroupBtn">Send</button>
             </div>
         </div>
     );

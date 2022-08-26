@@ -28,7 +28,7 @@ export default function ApiProtocols() {
 
     return (
         <div className="api">
-            <div className="apiurlDescription">
+            {/* <div className="apiurlDescription">
                 <p className="apiurlDesc">
                     Use the Orders API to create, update, show details for,
                     authorize and capture payments for, save, and void orders.
@@ -36,7 +36,7 @@ export default function ApiProtocols() {
                 <h3 className="centerInnerBody" readOnly resize="none">
                     https://api.paypal.com/v2/checkout
                 </h3>
-            </div>
+            </div> */}
             <div className="httpsLink">
                 <p className="dashApiHeaderSmall">Supported protocols</p>
                 <ProtolFilter

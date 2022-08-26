@@ -81,11 +81,11 @@ const DashboardCenter = (props, ref) => {
                 title={"Salesforce Connector - Mule 4"}
                 dropDownData={dropDownData}
             />
-            <div ref={summaryRef}>
+            <div id="summary">
                 <ApiDetails apiTitle={"PayPal Orders v2"} apiVersion="2.0" />
                 <ApiProtocols />
             </div>
-            <div ref={endPointsRef}>
+            <div id="endpoints">
                 <ApiEndPoints />
             </div>
         </div>

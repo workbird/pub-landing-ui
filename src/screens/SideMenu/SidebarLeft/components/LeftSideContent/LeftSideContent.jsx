@@ -10,19 +10,19 @@ export default function LeftSideContent({ onClick, active }) {
             {/* apiSummary apiEndpoints */}
             <LeftSideLink
                 title="Specfications"
-                onClick={() => onClick("summary")}
+                link="/dashboard/#summary"
                 // isActive={active === "summary"}
             />
             <LeftSideLink
                 title="Endpoints"
-                onClick={() => onClick("endpoints")}
+                link={`/dashboard/#endpoints`}
                 // isActive={active === "endpoints"}
             />
-            <LeftSideLink title="Types" />
-            <LeftSideLink title="Security" />
-            <LeftSideLink title="Summary" />
+            <LeftSideLink link={"#"} title="Types" />
+            <LeftSideLink link={"#"} title="Security" />
+            <LeftSideLink link={"#"} title="Summary" />
 
-            <LeftSideLink title="API instances" />
+            <LeftSideLink link={"#"} title="API instances" />
         </div>
     );
 }

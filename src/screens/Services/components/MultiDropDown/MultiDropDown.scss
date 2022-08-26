@@ -1,3 +1,5 @@
+@use "../../../../styles/" as *;
+
 $color: #0057a5;
 
 .multiDropDow {
@@ -5,11 +7,39 @@ $color: #0057a5;
         font-size: 1rem !important;
     }
 }
+.multiDropDownItems {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    @include break("lg") {
+        flex-direction: row;
+    }
+    @include break("xxl") {
+        justify-content: space-between;
+    }
+}
 
 .dropMenu {
     background: $color;
 }
 .multiDropDow {
+    width: 100%;
+
+    @include break("md") {
+        width: 45%;
+    }
+    @include break("lg") {
+        width: 30%;
+    }
+    @include break("xl") {
+        width: 20%;
+    }
+    @include break("xxl") {
+        width: 15%;
+    }
+
     button {
         background: transparent !important;
         color: #fff !important;
